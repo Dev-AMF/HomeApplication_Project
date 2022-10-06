@@ -31,7 +31,8 @@ namespace ShopManagement.Application
             }
             else
             {
-                return result.Failed($"Another Record With Name-{command.Name}-Already Exists!");
+                
+                return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists , command.Name));
             }
         }
 
@@ -44,7 +45,7 @@ namespace ShopManagement.Application
             {
                 if (_repository.Exists(PC => PC.Name == command.Name && PC.Id != command.Id))
                 {
-                    return result.Failed($"Another Record With Name-{command.Name}-Already Exists!");
+                    return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists, command.Name));
                 }
                 else
                 {
@@ -58,13 +59,18 @@ namespace ShopManagement.Application
             }
             else
             {
-                return result.Failed($"There Is Not Any Records Matching With The Given Information!");
+                return result.Failed(ApplicationMessage.RecordNotFound);
             }
         }
 
         public EditProductCategory GetDetails(int id)
         {
             return _repository.GetDetails(id);
+        }
+
+        public List<ProductCategoryViewModel> GetProductCategoryViewModels()
+        {
+            return _repository.GetProductCategoryViewModels();
         }
 
         public List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel)

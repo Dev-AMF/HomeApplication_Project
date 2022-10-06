@@ -6,8 +6,8 @@ namespace _0_Framework.Application
 {
     public class OperationResult
     {
-        public bool IsSucceded { get; set; }
-        public string Message { get; set; }
+        public bool IsSucceded { get; private set; }
+        public string Message { get; private set; }
         public OperationResult()
         {
             IsSucceded = false;

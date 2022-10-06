@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
+using ShopManagement.Domain.ProductPictureSliderAgg;
+using ShopManagement.Domain.SlideAgg;
 using ShopManagement.Infrastructure.EFCore.Mapping;
 using System;
 using System.Collections.Generic;
@@ -13,6 +16,12 @@ namespace ShopManagement.Infrastructure.EFCore
         public DbSet<ProductCategoryPageMetas> ProductCategoriesPageMetas { get; set; }
         public DbSet<ProductCategoryPicture> ProductCategoriesPictures { get; set; }
 
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductPageMetas> ProductsPageMetas { get; set; }
+        public DbSet<ProductPicture> ProductsPictures { get; set; }
+
+        public DbSet<ProductPictureSlider> ProductsPicturesSliders { get; set; }
+        public DbSet<Slide> Sliders { get; set; }
 
         public At_HomeApplicationContext(DbContextOptions<At_HomeApplicationContext> options) : base(options)
         {
@@ -21,7 +30,7 @@ namespace ShopManagement.Infrastructure.EFCore
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var assembly = typeof(ProuctCategoryMapping).Assembly;
+            var assembly = typeof(ProuctMapping).Assembly;
             modelBuilder.ApplyConfigurationsFromAssembly(assembly); 
 
             base.OnModelCreating(modelBuilder);

@@ -11,6 +11,7 @@ namespace ShopManagement.Domain.ProductCategoryAgg
     {
         public ProductCategory GetIncludings(int id);
         EditProductCategory GetDetails(int id);
+        List<ProductCategoryViewModel> GetProductCategoryViewModels();
         List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel);
     }
 }

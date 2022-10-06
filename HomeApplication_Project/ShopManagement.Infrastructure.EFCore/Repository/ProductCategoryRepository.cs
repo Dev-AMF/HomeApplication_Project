@@ -37,7 +37,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                     PictureAlt = PC.Picture.Alt,
                     PictureTitle = PC.Picture.Title,
 
-                 }).FirstOrDefault(PC=>PC.Id == id );
+                 }).FirstOrDefault(EPC => EPC.Id == id );
         }
 
 
@@ -55,7 +55,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             
             if (! String.IsNullOrWhiteSpace(searchModel.Name))
             {
-                query = query.Where(PC => PC.Name.Contains(searchModel.Name));
+                query = query.Where(PCvm => PCvm.Name.Contains(searchModel.Name));
             }
 
             return query.ToList();
@@ -67,6 +67,16 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                     .Include(Pc => Pc.Picture)
                     .Include(Pc => Pc.Metas)
                     .FirstOrDefault(Pc => Pc.Id == id);
+        }
+
+        public List<ProductCategoryViewModel> GetProductCategoryViewModels()
+        {
+            return  _context.ProductCategories
+                   .Select(PC => new ProductCategoryViewModel
+                   {
+                       Id = PC.Id,
+                       Name = PC.Name,
+                   }).ToList();
         }
     }
 }

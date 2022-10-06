@@ -57,6 +57,11 @@ namespace ShopManagement.Application
 
             if (!_repository.Exists(P => P.Name == command.Name))
             {
+
+                return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists, command.Name));
+            }
+            else
+            {
                 var product = new Product(command.Code, command.Name, command.UnitPrice, command.ShortDescription, command.Description, command.CategoryId,
                                           command.PicturePath, command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription,
                                           command.Slug.Slugify());
@@ -64,10 +69,6 @@ namespace ShopManagement.Application
                 _repository.Save();
 
                 return result.Succeded();
-            }
-            else
-            {
-                return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists, command.Name));
             }
         }
 

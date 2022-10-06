@@ -19,8 +19,13 @@ namespace ShopManagement.Application
         {
             var result = new OperationResult();
 
-            if (! _repository.Exists( PC => PC.Name == command.Name) )
+            if (_repository.Exists( PC => PC.Name == command.Name) )
             {
+                return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists, command.Name));
+            }
+            else
+            {
+
                 var productcategory = new ProductCategory(command.Name, command.Description, command.PicturePath, command.PictureAlt,
                                                           command.PictureTitle, command.Keywords, command.MetaDescription,
                                                           command.Slug.Slugify());
@@ -28,11 +33,6 @@ namespace ShopManagement.Application
                 _repository.Save();
 
                 return result.Succeded();
-            }
-            else
-            {
-                
-                return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists , command.Name));
             }
         }
 

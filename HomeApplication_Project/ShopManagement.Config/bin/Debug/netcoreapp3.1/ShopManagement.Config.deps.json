@@ -9,6 +9,7 @@
       "ShopManagement.Config/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.1.9",
+          "Query": "1.0.0",
           "ShopManagement.Application": "1.0.0",
           "ShopManagement.Infrastructure.EFCore": "1.0.0"
         },
@@ -1024,6 +1025,15 @@
           "0-Framework.dll": {}
         }
       },
+      "Query/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
+          "ShopManagement.Infrastructure.EFCore": "1.0.0"
+        },
+        "runtime": {
+          "Query.dll": {}
+        }
+      },
       "ShopManagement.Application/1.0.0": {
         "dependencies": {
           "ShopManagement.Application.Contracts": "1.0.0",
@@ -1754,6 +1764,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "0-Framework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Query/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

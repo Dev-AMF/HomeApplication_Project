@@ -2576,6 +2576,20 @@
           "bin/placeholder/0-Framework.dll": {}
         }
       },
+      "Query/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
+          "ShopManagement.Infrastructure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Query.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Query.dll": {}
+        }
+      },
       "ShopManagement.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -2608,6 +2622,7 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.1.9",
+          "Query": "1.0.0",
           "ShopManagement.Application": "1.0.0",
           "ShopManagement.Infrastructure.EFCore": "1.0.0"
         },
@@ -8515,6 +8530,11 @@
       "type": "project",
       "path": "../0-Framework/0-Framework.csproj",
       "msbuildProject": "../0-Framework/0-Framework.csproj"
+    },
+    "Query/1.0.0": {
+      "type": "project",
+      "path": "../Query/Query.csproj",
+      "msbuildProject": "../Query/Query.csproj"
     },
     "ShopManagement.Application/1.0.0": {
       "type": "project",

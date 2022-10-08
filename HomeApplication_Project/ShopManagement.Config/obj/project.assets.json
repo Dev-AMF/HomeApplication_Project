@@ -1481,6 +1481,20 @@
           "bin/placeholder/0-Framework.dll": {}
         }
       },
+      "Query/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
+          "ShopManagement.Infrastructure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Query.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Query.dll": {}
+        }
+      },
       "ShopManagement.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5716,6 +5730,11 @@
       "path": "../0-Framework/0-Framework.csproj",
       "msbuildProject": "../0-Framework/0-Framework.csproj"
     },
+    "Query/1.0.0": {
+      "type": "project",
+      "path": "../Query/Query.csproj",
+      "msbuildProject": "../Query/Query.csproj"
+    },
     "ShopManagement.Application/1.0.0": {
       "type": "project",
       "path": "../ShopManagement.Application/ShopManagement.Application.csproj",
@@ -5740,6 +5759,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.Extensions.DependencyInjection >= 3.1.9",
+      "Query >= 1.0.0",
       "ShopManagement.Application >= 1.0.0",
       "ShopManagement.Infrastructure.EFCore >= 1.0.0"
     ]
@@ -5770,6 +5790,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\Query\\Query.csproj": {
+              "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\Query\\Query.csproj"
+            },
             "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Application\\ShopManagement.Application.csproj": {
               "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Application\\ShopManagement.Application.csproj"
             },

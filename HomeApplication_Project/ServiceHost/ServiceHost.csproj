@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\UserTheme\assets\fonts\fontawesome-webfont3e6e.svg" />
+    <None Include="wwwroot\UserTheme\assets\fonts\fontawesome-webfont3e6e.woff2" />
+    <None Include="wwwroot\UserTheme\assets\fonts\ionicons28b5.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ShopManagement.Config\ShopManagement.Config.csproj" />
   </ItemGroup>
 

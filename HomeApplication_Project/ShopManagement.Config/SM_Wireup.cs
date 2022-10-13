@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Query.Contracts.ProductCategory;
 using Query.Contracts.Slide;
 using Query.Queries;
 using ShopManagement.Application;
@@ -17,7 +18,7 @@ using System;
 
 namespace ShopManagement.Config
 {
-    public static class Wireup
+    public static class SM_Wireup
     {
         public static void DoConfig(IServiceCollection services, string ConnectionString)
         {
@@ -34,6 +35,8 @@ namespace ShopManagement.Config
             services.AddTransient<ISlideRepository, SlideRepository>();
 
             services.AddTransient<ISlideQuery, SlideQuery>();
+
+            services.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
 
             //services.AddTransient<IUnitofwork, UnitofworkEf>();
 

@@ -55,7 +55,7 @@ namespace ShopManagement.Application
         {
             var result = new OperationResult();
 
-            if (!_repository.Exists(P => P.Name == command.Name))
+            if (_repository.Exists(P => P.Name == command.Name))
             {
 
                 return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists, command.Name));

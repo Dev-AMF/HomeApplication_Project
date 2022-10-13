@@ -31,6 +31,9 @@
     <!-- sweet alerts -->
     <link href="~/AdminTheme/Assets/sweet-alert/sweet-alert.min.css" rel="stylesheet">
 
+    <!-- Custom Files (Persian DatePicker) -->
+    <link href="~/AdminTheme/Assets/css/persian-datepicker.min.css" rel="stylesheet" />
+
     <!-- Custom Files -->
     <link href="~/AdminTheme/Assets/css/helper.css" rel="stylesheet" type="text/css" />
     <link href="~/AdminTheme/Assets/css/style.css" rel="stylesheet" type="text/css" />
@@ -157,7 +160,7 @@
         <!-- Top Bar End -->
 
         <partial name="_Menu" />
-        
+
         <!-- ============================================================== -->
         <!-- Start right Content here -->
         <!-- ============================================================== -->
@@ -249,19 +252,16 @@
 
     <script src="~/AdminTheme/Assets/js/site.js"></script>
 
+    <script src="~/AdminTheme/Assets/js/persian-date.min.js"></script>
+    <script src="~/AdminTheme/Assets/js/persian-datepicker.min.js"></script>
 
 
-    <!-- <script type="text/javascript"> -->
-    <!-- /* ============================================== -->
-    <!-- Counter Up -->
-    <!-- =============================================== */ -->
-    <!-- jQuery(document).ready(function($) { -->
-    <!-- $('.counter').counterUp({ -->
-    <!-- delay: 100, -->
-    <!-- time: 1200 -->
-    <!-- }); -->
-    <!-- }); -->
-    <!-- </script> -->
+    <script>
+        $('.persianDateInput').persianDatepicker({
+            format: 'YYYY/MM/DD',
+            autoClose: true
+        });
+    </script>
 
 </body>
 </html>

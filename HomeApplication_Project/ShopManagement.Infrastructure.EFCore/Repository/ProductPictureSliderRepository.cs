@@ -1,4 +1,5 @@
-﻿using _0_Framework.Domain;
+﻿using _0_Framework.Application;
+using _0_Framework.Domain;
 using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.Application.Contracts.ProductPictureSliderAgg;
@@ -44,7 +45,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                   {
                      Id = PPS.Id,
                      PicturePath = PPS.Path,
-                     CreationDate = PPS.CreationDate.ToString(),
+                     CreationDate = PPS.CreationDate.ToFarsi(),
                      ProductName = PPS.Product.Name,
                      ProductId = PPS.ProductId,
                      IsRemoved = PPS.IsRemoved

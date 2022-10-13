@@ -1,0 +1,16 @@
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.deps.json
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\bin\Debug\netcoreapp3.1\0-Framework.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contracts.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\bin\Debug\netcoreapp3.1\ShopManagement.Domain.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\bin\Debug\netcoreapp3.1\0-Framework.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\bin\Debug\netcoreapp3.1\ShopManagement.Domain.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contracts.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.csprojAssemblyReference.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.AssemblyInfoInputs.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.AssemblyInfo.cs
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.csproj.CoreCompileInputs.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.csproj.CopyComplete
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application.Contracts\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.pdb

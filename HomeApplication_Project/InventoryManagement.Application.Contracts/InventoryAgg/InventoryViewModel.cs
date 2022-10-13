@@ -3,7 +3,7 @@
     public class InventoryViewModel
     {
         public int Id { get; set; }
-        public string Product { get; set; }
+        public string ProductName { get; set; }
         public int ProductId { get; set; }
         public double UnitPrice { get; set; }
         public bool InStock { get; set; }

@@ -12,7 +12,7 @@ namespace InventoryManagement.Domain.InventoryAgg
         public int CurrentCount { get; private set; }
         public string Description { get; private set; }
         public int OrderId { get; private set; }
-        public int InvetoryId { get; private set; }
+        public int InventoryId { get; private set; }
         public Inventory Inventory { get; private set; }
 
         public InventoryOperation(bool operation, int count, int operatorId, int currentCount,
@@ -24,7 +24,11 @@ namespace InventoryManagement.Domain.InventoryAgg
             CurrentCount = currentCount;
             Description = description;
             OrderId = orderId;
-            InvetoryId = invetoryId;
+            InventoryId = invetoryId;
+        }
+        protected InventoryOperation()
+        {
+
         }
     }
 

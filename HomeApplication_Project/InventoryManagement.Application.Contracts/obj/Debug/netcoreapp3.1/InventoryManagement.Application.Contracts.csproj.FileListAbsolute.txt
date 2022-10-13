@@ -1,0 +1,12 @@
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application.Contracts\bin\Debug\netcoreapp3.1\InventoryManagement.Application.Contracts.deps.json
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application.Contracts\bin\Debug\netcoreapp3.1\InventoryManagement.Application.Contracts.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application.Contracts\bin\Debug\netcoreapp3.1\InventoryManagement.Application.Contracts.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application.Contracts\bin\Debug\netcoreapp3.1\0-Framework.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application.Contracts\bin\Debug\netcoreapp3.1\0-Framework.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application.Contracts\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contracts.csprojAssemblyReference.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application.Contracts\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contracts.AssemblyInfoInputs.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application.Contracts\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contracts.AssemblyInfo.cs
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application.Contracts\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contracts.csproj.CoreCompileInputs.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application.Contracts\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contracts.csproj.CopyComplete
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application.Contracts\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contracts.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application.Contracts\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contracts.pdb

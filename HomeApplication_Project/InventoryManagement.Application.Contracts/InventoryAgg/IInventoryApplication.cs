@@ -13,6 +13,7 @@ namespace InventoryManagement.Application.Contracts.InventoryAgg
         OperationResult Edit(EditInventory command);
         
         OperationResult Increase(IncreaseInventory command);
+        OperationResult Decrease(DecreaseInventory command);
         OperationResult Decrease(List<DecreaseInventory> command);
         
         List<InventoryViewModel> Search(InventorySearchModel searchModel);

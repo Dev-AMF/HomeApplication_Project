@@ -1480,6 +1480,19 @@
         "runtime": {
           "bin/placeholder/0-Framework.dll": {}
         }
+      },
+      "ShopManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "0-Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ShopManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ShopManagement.Application.Contracts.dll": {}
+        }
       }
     }
   },
@@ -5660,11 +5673,17 @@
       "type": "project",
       "path": "../0-Framework/0-Framework.csproj",
       "msbuildProject": "../0-Framework/0-Framework.csproj"
+    },
+    "ShopManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../ShopManagement.Application.Contracts/ShopManagement.Application.Contracts.csproj",
+      "msbuildProject": "../ShopManagement.Application.Contracts/ShopManagement.Application.Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "0-Framework >= 1.0.0"
+      "0-Framework >= 1.0.0",
+      "ShopManagement.Application.Contracts >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5695,6 +5714,9 @@
           "projectReferences": {
             "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\0-Framework\\0-Framework.csproj": {
               "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\0-Framework\\0-Framework.csproj"
+            },
+            "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
+              "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj"
             }
           }
         }

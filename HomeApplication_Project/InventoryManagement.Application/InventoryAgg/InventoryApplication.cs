@@ -98,6 +98,11 @@ namespace InventoryManagement.Application.InventoryAgg
             return _repository.GetDetails(id);
         }
 
+        public List<InventoryOperationViewModel> GetOperationsLog(int inventoryId)
+        {
+            return _repository.GetOperationsLog(inventoryId);
+        }
+
         public OperationResult Increase(IncreaseInventory command)
         {
             var operation = new OperationResult();

@@ -1,4 +1,5 @@
 ﻿using InventoryManagement.Application.Contracts.InventoryAgg;
+using InventoryManagement.Application.InventoryAgg;
 using InventoryManagement.Domain.InventoryAgg;
 using InventoryManagement.Infrastructure.EFCore;
 using InventoryManagement.Infrastructure.EFCore.Repository;
@@ -12,7 +13,7 @@ namespace InventoryManagement.Infrastructure.Config
     {
         public static void DoConfig(IServiceCollection services, string ConnectionString)
         {
-            //services.AddTransient<IInventoryApplication, InventoryApplication>();
+            services.AddTransient<IInventoryApplication, InventoryApplication>();
             services.AddTransient<IInventoryRepository, InventoryRepository>();
 
             

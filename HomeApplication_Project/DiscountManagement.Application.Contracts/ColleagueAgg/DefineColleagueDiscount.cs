@@ -7,10 +7,10 @@ namespace DiscountManagement.Application.Contracts.ColleagueAgg
 {
     public class DefineColleagueDiscount
     {
-        [Range(1, 100000, ErrorMessage = ValidationMessage.IsRequired)]
+        [Range(1, 100000, ErrorMessage = ValidationMessages.IsRequired)]
         public int ProductId { get; set; }
 
-        [Range(1, 99, ErrorMessage = ValidationMessage.IsRequired)]
+        [Range(1, 99, ErrorMessage = ValidationMessages.IsRequired)]
         public int DiscountRate { get; set; }
         public List<ProductViewModel> Products { get; set; }
     }

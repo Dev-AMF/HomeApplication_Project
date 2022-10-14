@@ -9,7 +9,7 @@ namespace ShopManagement.Application.Contracts.ProductCategoryAgg
     public class CreateProductCategory
     {
 
-        [Required(ErrorMessage = ValidationMessage.IsRequired)]
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string Name { get; set; }
 
 
@@ -19,13 +19,13 @@ namespace ShopManagement.Application.Contracts.ProductCategoryAgg
         public string PictureTitle { get; set; }
 
 
-        [Required(ErrorMessage = ValidationMessage.IsRequired)]
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string Keywords { get; set; }
 
-        [Required(ErrorMessage = ValidationMessage.IsRequired)]
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string MetaDescription { get; set; }
 
-        [Required(ErrorMessage = ValidationMessage.IsRequired)]
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string Slug { get; set; }
     }
 }

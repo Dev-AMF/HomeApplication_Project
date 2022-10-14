@@ -25,6 +25,7 @@ namespace InventoryManagement.Domain.InventoryAgg
             Description = description;
             OrderId = orderId;
             InventoryId = invetoryId;
+            OperationDate = DateTime.Now;
         }
         protected InventoryOperation()
         {

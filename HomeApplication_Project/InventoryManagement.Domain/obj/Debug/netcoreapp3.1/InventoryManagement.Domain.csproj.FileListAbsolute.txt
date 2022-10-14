@@ -12,3 +12,5 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryMan
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Domain\obj\Debug\netcoreapp3.1\InventoryManagement.Domain.csproj.CopyComplete
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Domain\obj\Debug\netcoreapp3.1\InventoryManagement.Domain.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Domain\obj\Debug\netcoreapp3.1\InventoryManagement.Domain.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Domain\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contracts.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Domain\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contracts.pdb

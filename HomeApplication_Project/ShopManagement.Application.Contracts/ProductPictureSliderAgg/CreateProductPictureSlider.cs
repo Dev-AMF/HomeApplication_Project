@@ -9,16 +9,16 @@ namespace ShopManagement.Application.Contracts.ProductPictureSliderAgg
 {
     public class CreateProductPictureSlider 
     {
-        [Range(1, 100000, ErrorMessage = ValidationMessage.IsRequired)]
+        [Range(1, 100000, ErrorMessage = ValidationMessages.IsRequired)]
         public int ProductId { get; set; }
 
-        [Required(ErrorMessage = ValidationMessage.IsRequired)]
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string Path { get; set; }
 
-        [Required(ErrorMessage = ValidationMessage.IsRequired)]
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string Alt { get; set; }
 
-        [Required(ErrorMessage = ValidationMessage.IsRequired)]
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string Title { get; set; }
         public List<ProductViewModel> ProductViewModels { get; set; }
     }

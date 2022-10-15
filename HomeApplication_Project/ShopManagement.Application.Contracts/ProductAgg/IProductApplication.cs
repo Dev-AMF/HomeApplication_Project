@@ -7,9 +7,6 @@ namespace ShopManagement.Application.Contracts.ProductAgg
 {
     public interface IProductApplication
     {
-        OperationResult ActivateInStock(int id);
-        OperationResult DeactivateInStock(int id);
-
         EditProduct GetDetails(int id);
 
         OperationResult Create(CreateProduct command);

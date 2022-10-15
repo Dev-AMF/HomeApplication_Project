@@ -13,11 +13,7 @@ namespace ShopManagement.Application.Contracts.ProductAgg
         public string Code { get; set; }
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string Name { get; set; }
-        [Required(ErrorMessage = ValidationMessages.IsRequired)]
-        public double UnitPrice { get; set; }
-
-        public bool IsInStock { get; set; }
-
+        
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string ShortDescription { get; set; }
         

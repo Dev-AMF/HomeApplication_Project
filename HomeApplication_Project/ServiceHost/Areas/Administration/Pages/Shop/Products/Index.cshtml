@@ -1,6 +1,7 @@
 ﻿@page
 @model ServiceHost.Areas.Administration.Pages.Shop.Products.IndexModel
-@{  
+@{
+    Layout = "Shared/_AdminLayout";
     ViewData["title"] = "مدیریت محصولات";
 }
 
@@ -27,12 +28,12 @@
                     </div>
                     <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.Code"></label>
-                        <input class="form-control" asp-for="SearchModel.Code" placeholder="کد محصول">
+                        <input class="form-control" asp-for="SearchModel.Code" placeholder="کد">
                     </div>
                     <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.CategoryId"></label>
                         <select class="form-control" asp-for="SearchModel.CategoryId" asp-items="Model.productcategories">
-                            <option value="0">گروه محصولی را انتخاب کنید</option>
+                            <option value="0">گروه محصولی ...</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">جستجو</button>
@@ -56,11 +57,10 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>کد</th>
-                                    <th>نام</th>
                                     <th>عکس</th>
+                                    <th>نام</th>
+                                    <th>کد</th>
                                     <th>گروه</th>
-                                    <th>قیمت</th>
                                     <th>تاریخ تولید</th>
                                     <th>عملیات</th>
                                 </tr>
@@ -68,33 +68,22 @@
                             <tbody>
                                 @foreach (var item in Model.products)
                                 {
-                                <tr>
-                                    <td>@item.Id</td>
-                                    <td>@item.Code</td>
-                                    <td>@item.Name</td>
-                                    <td>
-                                        <img src="@item.PicturePath" style="width: 70px; height: 70px" />
-                                        @*<img src="~/ProductPictures/@item.PicturePath" style="width: 70px; height: 70px" />*@
-                                    </td>
-                                    <td>@item.CategoryName</td>
-                                    <td>@item.UnitPrice</td>
-                                    <td>@item.CreationDate</td>
-                                    <td>
-                                        <a class="btn btn-icon waves-effect waves-light btn-warning m-b-5"
-                                           href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id})">
-                                            <i class="fa fa-wrench"></i> ویرایش
-                                        </a>
-                                        @if (item.IsInStock)
-                                        {
-                                            <a asp-page="./Index" asp-page-handler="DeactivateInStock" asp-route-id="@item.Id" class="btn btn-icon waves-effect waves-light btn-danger m-b-5"><i class="fa fa-remove"></i> نا موجود کردن</a>
-                                        }
-                                        else
-                                        {
-                                            <a asp-page="./Index" asp-page-handler="ActivateInStock" asp-route-id="@item.Id" class="btn btn-icon waves-effect waves-light btn-success m-b-5"><i class="fa fa-check"></i> موجود کردن</a>
-                                        }
-
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td>@item.Id</td>
+                                        <td>
+                                            <img src="@item.PicturePath" style="width: 70px; height: 70px" />
+                                        </td>
+                                        <td>@item.Name</td>
+                                        <td>@item.Code</td>
+                                        <td>@item.CategoryName</td>
+                                        <td>@item.CreationDate</td>
+                                        <td>
+                                            <a class="btn btn-icon waves-effect waves-light btn-warning m-b-5"
+                                               href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id})">
+                                                <i class="fa fa-wrench"></i> ویرایش
+                                            </a>
+                                        </td>
+                                    </tr>
                                 }
                             </tbody>
                         </table>
@@ -115,3 +104,16 @@
         });
     </script>
 }
+
+<!--<td>
+    
+    @*@if (item.IsInStock)
+        {
+            <a asp-page="./Index" asp-page-handler="DeactivateInStock" asp-route-id="@item.Id" class="btn btn-icon waves-effect waves-light btn-danger m-b-5"><i class="fa fa-remove"></i> نا موجود کردن</a>
+        }
+        else
+        {
+            <a asp-page="./Index" asp-page-handler="ActivateInStock" asp-route-id="@item.Id" class="btn btn-icon waves-effect waves-light btn-success m-b-5"><i class="fa fa-check"></i> موجود کردن</a>
+        }*@
+
+<!--</td>-->

@@ -11,8 +11,7 @@ namespace ShopManagement.Domain.ProductAgg
     {
         public string Code { get; private set; }
         public string Name { get; private set; }
-        public double UnitPrice { get; private set; }
-        public bool IsInStock { get; private set; }
+        
         public string ShortDescription { get; private set; }
         public string Description { get; private set; }
         
@@ -33,13 +32,11 @@ namespace ShopManagement.Domain.ProductAgg
 
         }
 
-        public Product(string code, string name, double unitPrice, string shortDescription, string description, int categoryId, 
+        public Product(string code, string name, string shortDescription, string description, int categoryId, 
                        string path, string alt, string title, string keywords, string metaDescription, string slug)
         {
             Code = code;
             Name = name;
-            UnitPrice = unitPrice;
-            ActivateInStock () ;
             ShortDescription = shortDescription;
             Description = description;
             CategoryId = categoryId;
@@ -47,13 +44,11 @@ namespace ShopManagement.Domain.ProductAgg
             Metas = new ProductPageMetas(keywords, metaDescription, slug); ;
         }
 
-        public void Edit(string code, string name, double unitPrice, bool isInStock, string shortDescription, string description, int categoryId,
+        public void Edit(string code, string name, string shortDescription, string description, int categoryId,
                          string path, string alt, string title, string keywords, string metaDescription, string slug)
         {
             Code = code;
             Name = name;
-            UnitPrice = unitPrice;
-            IsInStock = isInStock ;
             ShortDescription = shortDescription;
             Description = description;
             CategoryId = categoryId;
@@ -61,13 +56,6 @@ namespace ShopManagement.Domain.ProductAgg
             Metas.Edit (keywords, metaDescription, slug); ;
         }
 
-        public void ActivateInStock ()
-        {
-            this.IsInStock = true;
-        }
-        public void DeactivateInStock ()
-        {
-            this.IsInStock = false;
-        }
+        
     }
 }

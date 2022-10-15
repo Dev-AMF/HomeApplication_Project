@@ -16,41 +16,6 @@ namespace ShopManagement.Application
             _repository = repository;
         }
 
-        public OperationResult ActivateInStock(int id)
-        {
-            var result = new OperationResult();
-            var product = _repository.Get(id);
-            
-            if (product != null)
-            {
-                product.ActivateInStock();
-                _repository.Save();
-
-                return result.Succeded();
-            }
-            else
-            {
-                return result.Failed(ApplicationMessage.RecordNotFound);
-            }
-        }
-        public OperationResult DeactivateInStock(int id)
-        {
-            var result = new OperationResult();
-            var product = _repository.Get(id);
-
-            if (product != null)
-            {
-                product.DeactivateInStock();
-                _repository.Save();
-
-                return result.Succeded();
-            }
-            else
-            {
-                return result.Failed(ApplicationMessage.RecordNotFound);
-            }
-        }
-
         public OperationResult Create(CreateProduct command)
         {
             var result = new OperationResult();
@@ -62,7 +27,7 @@ namespace ShopManagement.Application
             }
             else
             {
-                var product = new Product(command.Code, command.Name, command.UnitPrice, command.ShortDescription, command.Description, command.CategoryId,
+                var product = new Product(command.Code, command.Name, command.ShortDescription, command.Description, command.CategoryId,
                                           command.PicturePath, command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription,
                                           command.Slug.Slugify());
                 _repository.Create(product);
@@ -86,7 +51,7 @@ namespace ShopManagement.Application
                 }
                 else
                 {
-                    prouct.Edit(command.Code, command.Name, command.UnitPrice, command.IsInStock, command.ShortDescription, command.Description,
+                    prouct.Edit(command.Code, command.Name, command.ShortDescription, command.Description,
                                 command.CategoryId,command.PicturePath, command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription,
                                 command.Slug.Slugify());
                     

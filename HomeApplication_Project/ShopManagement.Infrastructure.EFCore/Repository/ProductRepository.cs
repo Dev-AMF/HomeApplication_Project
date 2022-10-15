@@ -31,7 +31,6 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                     Code = P.Code,
                     Description = P.Description,
                     ShortDescription = P.ShortDescription,
-                    UnitPrice = P.UnitPrice,
                     CategoryId = P.CategoryId, 
                     Keywords = P.Metas.Keywords,
                     MetaDescription = P.Metas.MetaDescription,
@@ -74,9 +73,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                     CategoryId = P.Category.Id,
                     Code = P.Code,
                     PicturePath = P.Picture.Path,
-                    UnitPrice = P.UnitPrice,
-                    CreationDate = P.CreationDate.ToFarsi(),
-                    IsInStock = P.IsInStock
+                    CreationDate = P.CreationDate.ToFarsi()
                 });
 
             if (!String.IsNullOrWhiteSpace(searchModel.Name))

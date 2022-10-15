@@ -59,18 +59,6 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Products
             return new JsonResult(result);
         }
 
-        public IActionResult OnGetDeactivateInStock(int id)
-        {
-            _application.DeactivateInStock(id);
-
-            return RedirectToPage("./Index");
-        }
-
-        public IActionResult OnGetActivateInStock(int id)
-        {
-            _application.ActivateInStock(id);
-
-            return RedirectToPage("./Index");
-        }
+        
     }
 }

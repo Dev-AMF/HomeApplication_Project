@@ -218,3 +218,4 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\ProductCategory.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\Components\Footer\Default.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\Components\Menu\Default.cshtml.g.cs
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\Search.cshtml.g.cs

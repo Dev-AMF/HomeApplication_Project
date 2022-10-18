@@ -723,6 +723,12 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj"
+              },
+              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Infrastructure.EFCore\\InventoryManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Infrastructure.EFCore\\InventoryManagement.Infrastructure.EFCore.csproj"
+              },
               "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Infrastructure.EFCore\\ShopManagement.Infrastructure.EFCore.csproj": {
                 "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Infrastructure.EFCore\\ShopManagement.Infrastructure.EFCore.csproj"
               }

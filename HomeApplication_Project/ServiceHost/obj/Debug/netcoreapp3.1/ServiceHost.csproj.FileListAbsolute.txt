@@ -213,3 +213,8 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\staticwebassets\ServiceHost.StaticWebAssets.Manifest.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\staticwebassets\ServiceHost.StaticWebAssets.xml
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.genruntimeconfig.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\Components\ProductCategoryWithProduct\Default.cshtml.g.cs
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\Components\LatestArrivals\Default.cshtml.g.cs
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\ProductCategory.cshtml.g.cs
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\Components\Footer\Default.cshtml.g.cs
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\Components\Menu\Default.cshtml.g.cs

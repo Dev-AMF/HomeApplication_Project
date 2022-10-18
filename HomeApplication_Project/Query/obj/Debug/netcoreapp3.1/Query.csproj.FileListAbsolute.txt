@@ -19,3 +19,15 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\obj\De
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\obj\Debug\netcoreapp3.1\Query.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\obj\Debug\netcoreapp3.1\Query.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\obj\Debug\netcoreapp3.1\Query.genruntimeconfig.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\InventoryManagement.Application.Contracts.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\InventoryManagement.Domain.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.EFCore.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.EFCore.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\InventoryManagement.Application.Contracts.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\InventoryManagement.Domain.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\DiscountManagement.Domain.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\DiscountManagement.Domain.pdb

@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace _0_Framework.Application
 {
-    public static class DateTools
+    public static class AppTools
     {
         public static string[] MonthNames =
             {"فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند"};
@@ -95,18 +95,17 @@ namespace _0_Framework.Application
             return new DateTime(year, month, day, new PersianCalendar());
         }
 
-        public static string ToMoney(this string myMoney)
+        public static string ToMoney(this double myMoney)
         {
-            //var cultureInfo = new CultureInfo("fa-Ir")
-            //{
-            //    NumberFormat = { CurrencyPositivePattern = 3, CurrencyNegativePattern = 3 }
-            //};
-
-            //var result = string.Format(cultureInfo, "{0:C0}", myMoney);
-            var number = int.Parse(myMoney);
-            var result = number.ToString("N0", CultureInfo.CreateSpecificCulture("fa-ir"));
-            return result;
+            return myMoney.ToString("N0", CultureInfo.CreateSpecificCulture("fa-ir"));
         }
+        
+        public static string ToDiscountFormat(this DateTime date)
+        {
+            if (date == new DateTime()) return "";
+            return $"{date.Year}/{date.Month}/{date.Day}";
+        }
+
         public static string ToFileName(this DateTime date)
         {
             return $"{date.Year:0000}-{date.Month:00}-{date.Day:00}-{date.Hour:00}-{date.Minute:00}-{date.Second:00}";

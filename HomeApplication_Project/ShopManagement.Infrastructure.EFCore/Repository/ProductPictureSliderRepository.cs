@@ -21,20 +21,20 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             _context = context;
         }
 
-       
         public EditProductPictureSlider GetDetails(int id)
         {
             return _context.ProductsPicturesSliders
                   .Select(PPS => new EditProductPictureSlider
                   {
                    Id = PPS.Id,
-                   Path = PPS.Path,
+                   PicturePath = PPS.Path,
                    Title = PPS.Title,
                    Alt = PPS.Alt,
                    ProductId = PPS.ProductId
                   })
                   .FirstOrDefault(PPS => PPS.Id == id);
         }
+
 
         public List<ProductPictureSliderViewModel> Search(ProductPictureSliderSearchModel searchModel)
         {

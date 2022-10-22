@@ -79,5 +79,13 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                        Name = PC.Name,
                    }).ToList();
         }
+
+        public string GetSlugById(int id)
+        {
+            return _context.ProductCategories
+                            .Include(Pc => Pc.Metas)
+                           .FirstOrDefault(Pc => Pc.Id == id)
+                           .Metas.Slug;
+        }
     }
 }

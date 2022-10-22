@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using Microsoft.AspNetCore.Http;
 using ShopManagement.Application.Contracts.ProductCategoryAgg;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,11 @@ namespace ShopManagement.Application.Contracts.ProductAgg
         
         [Range(0,100,ErrorMessage = ValidationMessages.IsRequired)]
         public int CategoryId { get; set; }
+
+        [FileExtensionValidation(new string[] { ".jpeg", ".jpg", ".png" }, ErrorMessage = ValidationMessages.FormatIsNotValid)]
+        [MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessages.FileSizeExceeded)]
+        public IFormFile Picture { get; set; }
+
         public string PicturePath { get; set; }
         public string PictureAlt { get; set; }
         public string PictureTitle { get; set; }

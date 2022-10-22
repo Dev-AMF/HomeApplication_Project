@@ -1,6 +1,8 @@
 ﻿using _0_Framework.Application;
+using _0_Framework.Application.Contracts;
 using ShopManagement.Application.Contracts.ProductAgg;
 using ShopManagement.Domain.ProductAgg;
+using ShopManagement.Domain.ProductCategoryAgg;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,11 +11,15 @@ namespace ShopManagement.Application
 {
     public class ProductApplication : IProductApplication
     {
+        private readonly IProductCategoryRepository _categoryRepository;
         private readonly IProductRepository _repository;
+        private readonly IFileUploader _uploader;
 
-        public ProductApplication(IProductRepository repository)
+        public ProductApplication(IProductRepository repository, IFileUploader uploader, IProductCategoryRepository categoryRepository)
         {
             _repository = repository;
+            _uploader = uploader;
+            _categoryRepository = categoryRepository;
         }
 
         public OperationResult Create(CreateProduct command)
@@ -27,10 +33,14 @@ namespace ShopManagement.Application
             }
             else
             {
-                var product = new Product(command.Code, command.Name, command.ShortDescription, command.Description, command.CategoryId,
-                                          command.PicturePath, command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription,
+                    var categorySlug = _categoryRepository.GetSlugById(command.CategoryId);
+                    var picturePath = _uploader.Upload(command.Picture, $"{categorySlug}/{command.Slug.Slugify()}");
+
+                    var product = new Product(command.Code, command.Name, command.ShortDescription, command.Description, command.CategoryId,
+                                          picturePath, command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription,
                                           command.Slug.Slugify());
-                _repository.Create(product);
+                    _repository.Create(product);
+
                 _repository.Save();
 
                 return result.Succeded();
@@ -51,9 +61,23 @@ namespace ShopManagement.Application
                 }
                 else
                 {
-                    prouct.Edit(command.Code, command.Name, command.ShortDescription, command.Description,
-                                command.CategoryId,command.PicturePath, command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription,
-                                command.Slug.Slugify());
+                    if (command.Picture == null)
+                    {
+
+                        prouct.Edit(command.Code, command.Name, command.ShortDescription, command.Description,
+                                    command.CategoryId, command.PicturePath, command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription,
+                                    command.Slug.Slugify());
+                    }
+                    else
+                    {
+                        var categorySlug = _categoryRepository.GetSlugById(command.CategoryId);
+                        var picturePath = _uploader.Upload(command.Picture, $"{categorySlug}/{command.Slug.Slugify()}");
+
+
+                        prouct.Edit(command.Code, command.Name, command.ShortDescription, command.Description,
+                                    command.CategoryId, picturePath, command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription,
+                                    command.Slug.Slugify());
+                    }
                     
                     _repository.Save();
 

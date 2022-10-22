@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using Microsoft.AspNetCore.Http;
 using ShopManagement.Application.Contracts.ProductAgg;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,12 @@ namespace ShopManagement.Application.Contracts.ProductPictureSliderAgg
         [Range(1, 100000, ErrorMessage = ValidationMessages.IsRequired)]
         public int ProductId { get; set; }
 
+        [FileExtensionValidation(new string[] { ".jpeg", ".jpg", ".png" }, ErrorMessage = ValidationMessages.FormatIsNotValid)]
+        [MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessages.FileSizeExceeded)]
+        public IFormFile Picture { get; set; }
+
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
-        public string Path { get; set; }
+        public string PicturePath { get; set; }
 
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string Alt { get; set; }

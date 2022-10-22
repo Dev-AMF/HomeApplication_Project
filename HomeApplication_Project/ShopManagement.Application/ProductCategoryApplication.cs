@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using _0_Framework.Application.Contracts;
 using ShopManagement.Application.Contracts.ProductCategoryAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using System;
@@ -8,11 +9,13 @@ namespace ShopManagement.Application
 {
     public class ProductCategoryApplication : IProductCategoryApplication
     {
+        private readonly IFileUploader _uploader;
         private readonly IProductCategoryRepository _repository;
 
-        public ProductCategoryApplication(IProductCategoryRepository repository)
+        public ProductCategoryApplication(IProductCategoryRepository repository, IFileUploader uploader)
         {
             _repository = repository;
+            _uploader = uploader;
         }
 
         public OperationResult Create(CreateProductCategory command)
@@ -25,11 +28,11 @@ namespace ShopManagement.Application
             }
             else
             {
+                    var picturePath = _uploader.Upload(command.Picture, command.Slug.Slugify());
 
-                var productcategory = new ProductCategory(command.Name, command.Description, command.PicturePath, command.PictureAlt,
+                    var productcategory = new ProductCategory(command.Name, command.Description, picturePath, command.PictureAlt,
                                                           command.PictureTitle, command.Keywords, command.MetaDescription,
-                                                          command.Slug.Slugify());
-                _repository.Create(productcategory);
+                                                          command.Slug.Slugify());   
                 _repository.Save();
 
                 return result.Succeded();
@@ -49,9 +52,22 @@ namespace ShopManagement.Application
                 }
                 else
                 {
-                    prouctCat.Edit(command.Name, command.Description, command.PicturePath, command.PictureAlt,
-                                                          command.PictureTitle, command.Keywords, command.MetaDescription,
-                                                          command.Slug.Slugify());
+                    if (command.Picture == null)
+                    {
+                        prouctCat.Edit(command.Name, command.Description, command.PicturePath, command.PictureAlt,
+                                                              command.PictureTitle, command.Keywords, command.MetaDescription,
+                                                              command.Slug.Slugify());
+
+                    }
+                    else
+                    {
+                        var picturePath = _uploader.Upload(command.Picture, command.Slug.Slugify());
+
+                        prouctCat.Edit(command.Name, command.Description, picturePath, command.PictureAlt,
+                                                              command.PictureTitle, command.Keywords, command.MetaDescription,
+                                                              command.Slug.Slugify());
+                        
+                    }
                     _repository.Save();
 
                     return result.Succeded();

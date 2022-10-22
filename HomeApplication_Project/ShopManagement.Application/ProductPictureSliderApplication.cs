@@ -1,5 +1,8 @@
 ﻿using _0_Framework.Application;
+using _0_Framework.Application.Contracts;
 using ShopManagement.Application.Contracts.ProductPictureSliderAgg;
+using ShopManagement.Domain.ProductAgg;
+using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureSliderAgg;
 using System;
 using System.Collections.Generic;
@@ -9,52 +12,79 @@ namespace ShopManagement.Application
 {
     public class ProductPictureSliderApplication : IProductPictureSliderApplication
     {
-        private readonly IProductPictureSliderRepository _repository;
+        private readonly IProductCategoryRepository _categoryRepository;
+        private readonly IProductPictureSliderRepository _pictureRepository;
+        private readonly IProductRepository _productRepository;
+        private readonly IFileUploader _uploader;
 
-        public ProductPictureSliderApplication(IProductPictureSliderRepository repository)
+        public ProductPictureSliderApplication(IProductCategoryRepository categoryRepository, 
+                                               IProductPictureSliderRepository pictureRepository, 
+                                               IProductRepository productRepository, 
+                                               IFileUploader uploader)
         {
-            _repository = repository;
+            _categoryRepository = categoryRepository;
+            _pictureRepository = pictureRepository;
+            _productRepository = productRepository;
+            _uploader = uploader;
         }
 
         public OperationResult Create(CreateProductPictureSlider command)
         {
             var result = new OperationResult();
-            
-            if (_repository.Exists(PPS => PPS.ProductId == command.ProductId && PPS.Path == command.Path))
-            {
-                return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists, command.Title));
-            }
-            else
-            {
-                var productpictureslider = new ProductPictureSlider(command.ProductId, command.Path, command.Alt, command.Title);
 
-                _repository.Create(productpictureslider);
-                _repository.Save();
+            //if (_repository.Exists(PPS => PPS.ProductId == command.ProductId && PPS.Path == command.PicturePath))
+            //{
+            //    return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists, command.Title));
+            //}
+
+            var product = _productRepository.Get(command.ProductId);
+
+            var productSlug = _productRepository.GetIncludings(product.Id).Metas.Slug;
+            var categorySlug = _categoryRepository.GetIncludings(product.CategoryId).Metas.Slug;
+
+            var picturePath = _uploader.Upload(command.Picture, $"{categorySlug}/{productSlug}");
+
+            var productpictureslider = new ProductPictureSlider(command.ProductId, picturePath, command.Alt, command.Title);
+
+                _pictureRepository.Create(productpictureslider);
+                _pictureRepository.Save();
 
                 return result.Succeded();
-            }
+            
         }
 
         public OperationResult Edit(EditProductPictureSlider command)
         {
             var result = new OperationResult();
-            var productpictureslider = _repository.Get(command.Id);
+            var productpictureslider = _pictureRepository.Get(command.Id);
 
             if (productpictureslider != null)
             {
-                if (_repository.Exists(PPS => PPS.ProductId == command.ProductId 
-                                           && PPS.Path == command.Path 
-                                           && PPS.Id != command.Id)) //آپلود تصویر یکسان برای یک محصول
-                {
-                    return result.Failed(ApplicationMessage.RecordAlreadyExistsNonArgument);
-                }
-                else
-                {
-                    productpictureslider.Edit(command.ProductId, command.Path, command.Alt, command.Title);
-                    _repository.Save();
+                //if (_repository.Exists(PPS => PPS.ProductId == command.ProductId 
+                //                           && PPS.Path == command.PicturePath 
+                //                           && PPS.Id != command.Id)) //آپلود تصویر یکسان برای یک محصول
+                //{
+                //    return result.Failed(ApplicationMessage.RecordAlreadyExistsNonArgument);
+                //}
+                    if (command.Picture == null)
+                    {
+                        productpictureslider.Edit(command.ProductId, command.PicturePath, command.Alt, command.Title);
+                    }
+                    else
+                    {
+                    var product = _productRepository.Get(command.ProductId);
+
+                    var productSlug = _productRepository.GetIncludings(product.Id).Metas.Slug;
+                    var categorySlug = _categoryRepository.GetIncludings(product.CategoryId).Metas.Slug;
+
+                    var picturePath = _uploader.Upload(command.Picture, $"{categorySlug}/{productSlug}");
+
+                    productpictureslider.Edit(command.ProductId, picturePath, command.Alt, command.Title);
+                    }
+                    
+                    _pictureRepository.Save();
 
                     return result.Succeded();
-                }
             }
             else
             {
@@ -65,18 +95,18 @@ namespace ShopManagement.Application
 
         public EditProductPictureSlider GetDetails(int id)
         {
-            return _repository.GetDetails(id);
+            return _pictureRepository.GetDetails(id);
         }
 
         public OperationResult Remove(int id)
         {
             var result = new OperationResult();
-            var productpictureslider = _repository.Get(id);
+            var productpictureslider = _pictureRepository.Get(id);
 
             if (productpictureslider != null)
             {
                 productpictureslider.Deactivate();
-                _repository.Save();
+                _pictureRepository.Save();
 
                 return result.Succeded();
             }
@@ -89,12 +119,12 @@ namespace ShopManagement.Application
         public OperationResult Restore(int id)
         {
             var result = new OperationResult();
-            var productpictureslider = _repository.Get(id);
+            var productpictureslider = _pictureRepository.Get(id);
 
             if (productpictureslider != null)
             {
                 productpictureslider.Activate();
-                _repository.Save();
+                _pictureRepository.Save();
 
                 return result.Succeded();
             }
@@ -106,7 +136,7 @@ namespace ShopManagement.Application
 
         public List<ProductPictureSliderViewModel> Search(ProductPictureSliderSearchModel searchModel)
         {
-            return _repository.Search(searchModel);
+            return _pictureRepository.Search(searchModel);
         }
     }
 }

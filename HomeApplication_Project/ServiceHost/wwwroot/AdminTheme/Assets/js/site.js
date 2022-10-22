@@ -186,6 +186,7 @@ function handleAjaxCall(method, url, data) {
             });
     }
 }
+/////////////////////////////11111111111111111111111111/////////////////////////////////////////////
 
 jQuery.validator.addMethod("maxFileSize",
     function (value, element, params) {
@@ -198,6 +199,20 @@ jQuery.validator.addMethod("maxFileSize",
         }
     });
 jQuery.validator.unobtrusive.adapters.addBool("maxFileSize");
+
+////////////////////////////////////2222222222222222222///////////////////////////////////////////
+jQuery.validator.addMethod("fileExtensionValidation",
+    function (value, element, params) {
+        var ext = element.files[0].name.split('.').pop();
+        var validExtsnsions = ["jpg", "jpeg", "png"];
+        if (validExtsnsions.includes(ext))
+            return true;
+        else {
+            return false;
+        }
+    });
+jQuery.validator.unobtrusive.adapters.addBool("fileExtensionValidation");
+
 
 //jQuery.validator.addMethod("maxFileSize",
 //    function (value, element, params) {

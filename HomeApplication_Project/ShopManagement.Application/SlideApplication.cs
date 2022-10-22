@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using _0_Framework.Application.Contracts;
 using ShopManagement.Application.Contracts.SlideAgg;
 using ShopManagement.Domain.SlideAgg;
 using System;
@@ -10,17 +11,21 @@ namespace ShopManagement.Application
     public class SlideApplication : ISlideApplication
     {
         private readonly ISlideRepository _repository;
+        private readonly IFileUploader _uploader;
 
-        public SlideApplication(ISlideRepository repository)
+        public SlideApplication(ISlideRepository repository, IFileUploader uploader)
         {
             _repository = repository;
+            _uploader = uploader;
         }
 
         public OperationResult Create(CreateSlide command)
         {
             var result = new OperationResult();
-            
-            var slide = new Slide(command.Picture, command.PictureAlt, command.Title, command.Heading, command.Title,
+
+            var picturePath = _uploader.Upload(command.Picture, "Slides");
+
+            var slide = new Slide(picturePath, command.PictureAlt, command.Title, command.Heading, command.Title,
                                   command.Text, command.ButtonText, command.Link);
 
             result.Succeded();
@@ -38,10 +43,22 @@ namespace ShopManagement.Application
             
             if (slide != null)
             {
-                slide.Edit(command.Picture, command.PictureAlt, command.PictureTitle, 
-                           command.Heading, command.Title, command.Text, 
+                if (command.Picture == null)
+                {
+                    slide.Edit(command.PicturePath, command.PictureAlt, command.PictureTitle,
+                           command.Heading, command.Title, command.Text,
                            command.ButtonText, command.Link);
-                
+
+                }
+                else
+                {
+                    var picturePath = _uploader.Upload(command.Picture, "Slides");
+                    
+                    slide.Edit(picturePath, command.PictureAlt, command.PictureTitle,
+                           command.Heading, command.Title, command.Text,
+                           command.ButtonText, command.Link);
+                }
+
                 _repository.Save();
                 result.Succeded();
 

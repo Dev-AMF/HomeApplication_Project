@@ -10,6 +10,7 @@ namespace ShopManagement.Domain.ProductCategoryAgg
     public interface IProductCategoryRepository : IRepository<int, ProductCategory>
     {
         public ProductCategory GetIncludings(int id);
+        string GetSlugById(int id);
         EditProductCategory GetDetails(int id);
         List<ProductCategoryViewModel> GetProductCategoryViewModels();
         List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel);

@@ -8,6 +8,7 @@ namespace Query.Contracts.Product
         List<ProductQueryModel> Search(string value);
         List<ProductQueryModel> GetProductsBy(int categoryId);
         List<ProductQueryModel> GetLatestProductsBy(int count);
+        ProductQueryModel GetDetails(string slug);
     }
 }
     

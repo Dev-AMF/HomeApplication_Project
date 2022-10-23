@@ -18,9 +18,9 @@ namespace ServiceHost.Pages
             _productCategoryQuery = productCategoryQuery;
         }
 
-        public void OnGet(string id)
+        public void OnGet(string slug)
         {
-            ProductCategory = _productCategoryQuery.GetProductCategoryWithProducstsBy(id);
+            ProductCategory = _productCategoryQuery.GetProductCategoryWithProducstsBy(slug);
         }
     }
 }

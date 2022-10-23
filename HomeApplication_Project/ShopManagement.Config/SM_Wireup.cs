@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Query.Contracts.Product;
 using Query.Contracts.ProductCategory;
+using Query.Contracts.ProductPictureSlider;
 using Query.Contracts.Slide;
 using Query.Queries;
 using ShopManagement.Application;
@@ -39,6 +40,7 @@ namespace ShopManagement.Config
 
             services.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
             services.AddTransient<IProductQuery, ProductQuery>();
+            services.AddTransient<IProductPictureSliderQuery, ProductPictureSliderQuery>();
 
             //services.AddTransient<IUnitofwork, UnitofworkEf>();
 

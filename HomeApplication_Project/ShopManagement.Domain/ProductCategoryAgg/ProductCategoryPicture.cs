@@ -9,6 +9,7 @@ namespace ShopManagement.Domain.ProductCategoryAgg
     public class ProductCategoryPicture : Picture
     {
         public ProductCategory ProductCategory { get; set; }
+        public int ProductCategoryId { get; set; }
 
         protected ProductCategoryPicture()
         {

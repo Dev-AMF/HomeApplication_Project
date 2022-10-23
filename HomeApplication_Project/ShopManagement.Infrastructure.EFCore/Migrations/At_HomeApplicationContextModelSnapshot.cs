@@ -40,16 +40,10 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MetasId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(255)")
                         .HasMaxLength(255);
-
-                    b.Property<int>("PictureId")
-                        .HasColumnType("int");
 
                     b.Property<string>("ShortDescription")
                         .HasColumnType("nvarchar(500)")
@@ -59,67 +53,7 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("MetasId")
-                        .IsUnique();
-
-                    b.HasIndex("PictureId")
-                        .IsUnique();
-
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("ShopManagement.Domain.ProductAgg.ProductPageMetas", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Keywords")
-                        .HasColumnType("nvarchar(80)")
-                        .HasMaxLength(80);
-
-                    b.Property<string>("MetaDescription")
-                        .HasColumnType("nvarchar(150)")
-                        .HasMaxLength(150);
-
-                    b.Property<string>("Slug")
-                        .HasColumnType("nvarchar(300)")
-                        .HasMaxLength(300);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ProductsPageMetas");
-                });
-
-            modelBuilder.Entity("ShopManagement.Domain.ProductAgg.ProductPicture", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Alt")
-                        .HasColumnType("nvarchar(255)")
-                        .HasMaxLength(255);
-
-                    b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Path")
-                        .HasColumnType("nvarchar(100)")
-                        .HasMaxLength(100);
-
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(500)")
-                        .HasMaxLength(500);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ProductsPictures");
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.ProductCategoryAgg.ProductCategory", b =>
@@ -136,80 +70,14 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("nvarchar(500)")
                         .HasMaxLength(500);
 
-                    b.Property<int>("MetasId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(255)")
                         .HasMaxLength(255);
 
-                    b.Property<int>("PictureId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("MetasId")
-                        .IsUnique();
-
-                    b.HasIndex("PictureId")
-                        .IsUnique();
 
                     b.ToTable("ProductCategories");
-                });
-
-            modelBuilder.Entity("ShopManagement.Domain.ProductCategoryAgg.ProductCategoryPageMetas", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Keywords")
-                        .HasColumnType("nvarchar(80)")
-                        .HasMaxLength(80);
-
-                    b.Property<string>("MetaDescription")
-                        .HasColumnType("nvarchar(150)")
-                        .HasMaxLength(150);
-
-                    b.Property<string>("Slug")
-                        .HasColumnType("nvarchar(300)")
-                        .HasMaxLength(300);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ProductCategoriesPageMetas");
-                });
-
-            modelBuilder.Entity("ShopManagement.Domain.ProductCategoryAgg.ProductCategoryPicture", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Alt")
-                        .HasColumnType("nvarchar(255)")
-                        .HasMaxLength(255);
-
-                    b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Path")
-                        .HasColumnType("nvarchar(100)")
-                        .HasMaxLength(100);
-
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(500)")
-                        .HasMaxLength(500);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ProductCategoriesPictures");
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.ProductPictureSliderAgg.ProductPictureSlider", b =>
@@ -310,32 +178,152 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ShopManagement.Domain.ProductAgg.ProductPageMetas", "Metas")
-                        .WithOne("Product")
-                        .HasForeignKey("ShopManagement.Domain.ProductAgg.Product", "MetasId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.OwnsOne("ShopManagement.Domain.ProductAgg.ProductPageMetas", "Metas", b1 =>
+                        {
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int")
+                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.HasOne("ShopManagement.Domain.ProductAgg.ProductPicture", "Picture")
-                        .WithOne("Product")
-                        .HasForeignKey("ShopManagement.Domain.ProductAgg.Product", "PictureId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                            b1.Property<DateTime>("CreationDate")
+                                .HasColumnType("datetime2");
+
+                            b1.Property<string>("Keywords")
+                                .HasColumnType("nvarchar(80)")
+                                .HasMaxLength(80);
+
+                            b1.Property<string>("MetaDescription")
+                                .HasColumnType("nvarchar(150)")
+                                .HasMaxLength(150);
+
+                            b1.Property<int>("ProductId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("Slug")
+                                .HasColumnType("nvarchar(300)")
+                                .HasMaxLength(300);
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("ProductId")
+                                .IsUnique();
+
+                            b1.ToTable("ProductsPageMetas");
+
+                            b1.WithOwner("Product")
+                                .HasForeignKey("ProductId");
+                        });
+
+                    b.OwnsOne("ShopManagement.Domain.ProductAgg.ProductPicture", "Picture", b1 =>
+                        {
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int")
+                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                            b1.Property<string>("Alt")
+                                .HasColumnType("nvarchar(255)")
+                                .HasMaxLength(255);
+
+                            b1.Property<DateTime>("CreationDate")
+                                .HasColumnType("datetime2");
+
+                            b1.Property<string>("Path")
+                                .HasColumnType("nvarchar(100)")
+                                .HasMaxLength(100);
+
+                            b1.Property<int>("ProductId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("Title")
+                                .HasColumnType("nvarchar(500)")
+                                .HasMaxLength(500);
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("ProductId")
+                                .IsUnique();
+
+                            b1.ToTable("ProductsPictures");
+
+                            b1.WithOwner("Product")
+                                .HasForeignKey("ProductId");
+                        });
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.ProductCategoryAgg.ProductCategory", b =>
                 {
-                    b.HasOne("ShopManagement.Domain.ProductCategoryAgg.ProductCategoryPageMetas", "Metas")
-                        .WithOne("ProductCategory")
-                        .HasForeignKey("ShopManagement.Domain.ProductCategoryAgg.ProductCategory", "MetasId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.OwnsOne("ShopManagement.Domain.ProductCategoryAgg.ProductCategoryPageMetas", "Metas", b1 =>
+                        {
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int")
+                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.HasOne("ShopManagement.Domain.ProductCategoryAgg.ProductCategoryPicture", "Picture")
-                        .WithOne("ProductCategory")
-                        .HasForeignKey("ShopManagement.Domain.ProductCategoryAgg.ProductCategory", "PictureId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                            b1.Property<DateTime>("CreationDate")
+                                .HasColumnType("datetime2");
+
+                            b1.Property<string>("Keywords")
+                                .HasColumnType("nvarchar(80)")
+                                .HasMaxLength(80);
+
+                            b1.Property<string>("MetaDescription")
+                                .HasColumnType("nvarchar(150)")
+                                .HasMaxLength(150);
+
+                            b1.Property<int>("ProductCategoryID")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("Slug")
+                                .HasColumnType("nvarchar(300)")
+                                .HasMaxLength(300);
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("ProductCategoryID")
+                                .IsUnique();
+
+                            b1.ToTable("ProductCategoriesPageMetas");
+
+                            b1.WithOwner("ProductCategory")
+                                .HasForeignKey("ProductCategoryID");
+                        });
+
+                    b.OwnsOne("ShopManagement.Domain.ProductCategoryAgg.ProductCategoryPicture", "Picture", b1 =>
+                        {
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int")
+                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                            b1.Property<string>("Alt")
+                                .HasColumnType("nvarchar(255)")
+                                .HasMaxLength(255);
+
+                            b1.Property<DateTime>("CreationDate")
+                                .HasColumnType("datetime2");
+
+                            b1.Property<string>("Path")
+                                .HasColumnType("nvarchar(100)")
+                                .HasMaxLength(100);
+
+                            b1.Property<int>("ProductCategoryId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("Title")
+                                .HasColumnType("nvarchar(500)")
+                                .HasMaxLength(500);
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("ProductCategoryId")
+                                .IsUnique();
+
+                            b1.ToTable("ProductCategoriesPictures");
+
+                            b1.WithOwner("ProductCategory")
+                                .HasForeignKey("ProductCategoryId");
+                        });
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.ProductPictureSliderAgg.ProductPictureSlider", b =>

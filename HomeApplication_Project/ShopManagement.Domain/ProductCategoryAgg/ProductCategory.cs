@@ -14,10 +14,10 @@ namespace ShopManagement.Domain.ProductCategoryAgg
         public List<Product> Products { get; private set; }
 
         public ProductCategoryPicture Picture { get; private set; }
-        public int PictureId { get; private set; }
+        //public int PictureId { get; private set; }
         
         public ProductCategoryPageMetas Metas { get; private set; }
-        public int MetasId { get; private set; }
+        //public int MetasId { get; private set; }
 
         protected ProductCategory()
         {

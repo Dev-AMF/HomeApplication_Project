@@ -22,8 +22,8 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         public EditProduct GetDetails(int id)
         {
             return _context.Products
-                .Include(P => P.Metas)
-                .Include(P => P.Picture)
+                //.Include(P => P.Metas)
+                //.Include(P => P.Picture)
                 .Select(P => new EditProduct
                 {
                     Id = P.Id,
@@ -45,8 +45,8 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         public Product GetIncludings(int id)
         {
             return _context.Products
-                    .Include(P => P.Picture)
-                    .Include(P => P.Metas)
+                    //.Include(P => P.Picture)
+                    //.Include(P => P.Metas)
                     .FirstOrDefault(P => P.Id == id);
         }
 
@@ -64,7 +64,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         public List<ProductViewModel> Search(ProductSearchModel searchModel)
         {
             var query = _context.Products
-                .Include(P => P.Picture)
+                //.Include(P => P.Picture)
                 .Select(P => new ProductViewModel
                 {
                     Id = P.Id,

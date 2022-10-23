@@ -42,7 +42,7 @@ namespace ShopManagement.Application
         public OperationResult Edit(EditProductCategory command)
         {
             var result = new OperationResult();
-            var prouctCat = _repository.GetIncludings(command.Id);
+            var prouctCat = _repository.Get(command.Id);
 
             if (prouctCat != null)
             {

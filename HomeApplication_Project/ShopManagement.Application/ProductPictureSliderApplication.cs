@@ -39,8 +39,8 @@ namespace ShopManagement.Application
 
             var product = _productRepository.Get(command.ProductId);
 
-            var productSlug = _productRepository.GetIncludings(product.Id).Metas.Slug;
-            var categorySlug = _categoryRepository.GetIncludings(product.CategoryId).Metas.Slug;
+            var productSlug = _productRepository.Get(product.Id).Metas.Slug;
+            var categorySlug = _categoryRepository.Get(product.CategoryId).Metas.Slug;
 
             var picturePath = _uploader.Upload(command.Picture, $"{categorySlug}/{productSlug}");
 
@@ -74,8 +74,8 @@ namespace ShopManagement.Application
                     {
                     var product = _productRepository.Get(command.ProductId);
 
-                    var productSlug = _productRepository.GetIncludings(product.Id).Metas.Slug;
-                    var categorySlug = _categoryRepository.GetIncludings(product.CategoryId).Metas.Slug;
+                    var productSlug = _productRepository.Get(product.Id).Metas.Slug;
+                    var categorySlug = _categoryRepository.Get(product.CategoryId).Metas.Slug;
 
                     var picturePath = _uploader.Upload(command.Picture, $"{categorySlug}/{productSlug}");
 

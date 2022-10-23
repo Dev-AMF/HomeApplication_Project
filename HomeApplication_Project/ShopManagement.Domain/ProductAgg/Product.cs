@@ -19,10 +19,10 @@ namespace ShopManagement.Domain.ProductAgg
         public ProductCategory Category { get; set; }
 
         public ProductPicture Picture { get; private set; }
-        public int PictureId { get; private set; }
+        //public int PictureId { get; private set; }
 
         public ProductPageMetas Metas { get; private set; }
-        public int MetasId { get; private set; }
+        //public int MetasId { get; private set; }
 
         public ICollection<ProductPictureSlider> ProductPicturesSlider { get; private set; }
 

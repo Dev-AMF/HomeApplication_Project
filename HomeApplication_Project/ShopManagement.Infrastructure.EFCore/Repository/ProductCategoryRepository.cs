@@ -24,8 +24,8 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         public EditProductCategory GetDetails(int id)
         {
             return _context.ProductCategories
-                .Include( PC => PC.Metas)
-                .Include(PC => PC.Picture)
+                //.Include( PC => PC.Metas)
+                //.Include(PC => PC.Picture)
                 .Select(PC=> new EditProductCategory
                  { 
                     Id = PC.Id,
@@ -45,7 +45,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         public List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel)
         {
             var query = _context.ProductCategories
-                .Include(PC => PC.Picture)
+                //.Include(PC => PC.Picture)
                 .Select(PC => new ProductCategoryViewModel
                  {
                      Id = PC.Id,
@@ -65,8 +65,8 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         public ProductCategory GetIncludings(int id)
         {
             return _context.ProductCategories
-                    .Include(Pc => Pc.Picture)
-                    .Include(Pc => Pc.Metas)
+                    //.Include(Pc => Pc.Picture)
+                    //.Include(Pc => Pc.Metas)
                     .FirstOrDefault(Pc => Pc.Id == id);
         }
 
@@ -83,7 +83,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         public string GetSlugById(int id)
         {
             return _context.ProductCategories
-                            .Include(Pc => Pc.Metas)
+                           .Include(Pc => Pc.Metas)
                            .FirstOrDefault(Pc => Pc.Id == id)
                            .Metas.Slug;
         }

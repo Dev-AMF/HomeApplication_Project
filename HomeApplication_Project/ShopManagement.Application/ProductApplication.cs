@@ -51,7 +51,7 @@ namespace ShopManagement.Application
         public OperationResult Edit(EditProduct command)
         {
             var result = new OperationResult();
-            var prouct = _repository.GetIncludings(command.Id);
+            var prouct = _repository.Get(command.Id);
 
             if (prouct != null)
             {

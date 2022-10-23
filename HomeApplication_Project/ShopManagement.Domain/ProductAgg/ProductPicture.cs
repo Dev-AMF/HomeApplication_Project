@@ -8,6 +8,7 @@ namespace ShopManagement.Domain.ProductAgg
     public class ProductPicture : Picture
     {
         public Product Product { get; set; }
+        public int ProductId { get; set; }
 
         protected ProductPicture()
         {

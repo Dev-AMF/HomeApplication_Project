@@ -8,7 +8,7 @@ namespace ShopManagement.Domain.ProductCategoryAgg
     public class ProductCategoryPageMetas : PageMetas
     {
         public ProductCategory ProductCategory { get; set; }
-
+        public int ProductCategoryID { get; set; }
         protected ProductCategoryPageMetas()
         {
 

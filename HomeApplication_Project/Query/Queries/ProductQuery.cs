@@ -2,6 +2,7 @@
 using DiscountManagement.Infrastructure.EFCore;
 using InventoryManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
+using Query.Contracts.Comment;
 using Query.Contracts.Product;
 using Query.Contracts.ProductPictureSlider;
 using ShopManagement.Infrastructure.EFCore;
@@ -18,16 +19,19 @@ namespace Query.Queries
         private readonly At_HomeApplicationInventoryContext _inventoryContext;
         private readonly At_HomeApplicationDiscountContext _discountContext;
         private readonly IProductPictureSliderQuery _sliderQuery;
+        private readonly ICommentQuery _commentQuery;
 
         public ProductQuery(At_HomeApplicationContext context,
-                            At_HomeApplicationInventoryContext inventoryContext, 
-                            At_HomeApplicationDiscountContext discountContext, 
-                            IProductPictureSliderQuery sliderQuery)
+                            At_HomeApplicationInventoryContext inventoryContext,
+                            At_HomeApplicationDiscountContext discountContext,
+                            IProductPictureSliderQuery sliderQuery, 
+                            ICommentQuery commentQuery)
         {
             _context = context;
             _inventoryContext = inventoryContext;
             _discountContext = discountContext;
             _sliderQuery = sliderQuery;
+            _commentQuery = commentQuery;
         }
 
         public List<ProductQueryModel> GetLatestProductsBy(int count)
@@ -216,6 +220,7 @@ namespace Query.Queries
                            //.Include(P => P.Picture)
                            //.Include(P => P.Metas)
                            .Include(P => P.Category)
+                           .Include(P => P.Comments)
                            .Select(P => new ProductQueryModel
                            {
                                Id = P.Id,
@@ -239,6 +244,7 @@ namespace Query.Queries
                 return new ProductQueryModel();
 
             Pqm.PictursSlider = _sliderQuery.GetPicturesSliderByProduct(Pqm.Id);
+            Pqm.Comments = _commentQuery.GetCommentsByProduct(Pqm.Id);
 
             var productInventory = inventory.FirstOrDefault(I => I.ProductId == Pqm.Id);
 

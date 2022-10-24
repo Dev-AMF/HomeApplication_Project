@@ -1,4 +1,5 @@
-﻿using Query.Contracts.ProductPictureSlider;
+﻿using Query.Contracts.Comment;
+using Query.Contracts.ProductPictureSlider;
 using System.Collections.Generic;
 
 namespace Query.Contracts.Product
@@ -27,5 +28,6 @@ namespace Query.Contracts.Product
         public bool IsInStock { get; set; }
 
         public List<ProductPictureSliderQueryModel> PictursSlider { get; set; }
+        public List<CommentQueryModel> Comments { get; set; }
     }
 }

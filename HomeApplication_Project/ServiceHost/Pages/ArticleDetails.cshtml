@@ -1,7 +1,9 @@
 ﻿@page "{slug}"
 @model ServiceHost.Pages.ArticleDetailsModel
 @{
-    ViewData["Title"] = "صفحه مقاله";
+    ViewData["Title"] = Model.Article.Title;
+    ViewData["keywords"] = Model.Article.Keywords;
+    ViewData["metaDescription"] = Model.Article.MetaDescription;
 }
 
 <div class="breadcrumb-area section-space--half">

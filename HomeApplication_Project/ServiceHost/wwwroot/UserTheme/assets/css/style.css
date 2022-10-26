@@ -2567,8 +2567,7 @@ p.slider-title--small {
 	right: 20px;
 	display: flex;
 	flex-direction: column;
-	width: 62px;
-	height: 70px;
+	padding: 5px;
 	text-align: center;
 	background: #fff;
 	align-items: center;

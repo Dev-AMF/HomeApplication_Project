@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using _0_Framework.Application.Contracts;
+using BlogManagement.Infrastructure.Config;
 using DiscountManagement.Infrastructure.Config;
 using InventoryManagement.Infrastructure.Config;
 using Microsoft.AspNetCore.Builder;
@@ -32,6 +33,7 @@ namespace ServiceHost
             SM_Wireup.DoConfig(services , Configuration.GetConnectionString("HomeApplicationContext"));
             DM_Wireup.DoConfig(services, Configuration.GetConnectionString("HomeApplicationDiscountContext"));
             IM_Wireup.DoConfig(services, Configuration.GetConnectionString("At_HomeApplicationInventoryContext"));
+            BM_Wireup.DoConfig(services, Configuration.GetConnectionString("At_HomeApplicationBlogContext"));
 
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddRazorPages();

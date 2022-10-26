@@ -7,6 +7,8 @@ namespace _0_Framework.Application.Contracts
 {
     public interface IFileUploader
     {
-        string Upload(IFormFile file, string folder);
+        string Upload(IFormFile file, string folder , string parentFolder = "ProductPictures");
+
+        
     }
 }

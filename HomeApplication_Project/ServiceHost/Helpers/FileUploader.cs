@@ -19,13 +19,13 @@ namespace ServiceHost.Helpers
             _webHostEnvironment = webHostEnvironment;
         }
 
-        public string Upload(IFormFile file, string folder)
+        public string Upload(IFormFile file, string folder , string parentFolder = "ProductPictures")
         {
             if (file == null)    
                 return "";
 
 
-            var uploadDirectory = $"{_webHostEnvironment.WebRootPath}//ProductPictures//{folder}";
+            var uploadDirectory = $"{_webHostEnvironment.WebRootPath}//{parentFolder}//{folder}";
 
             if (!Directory.Exists(uploadDirectory)) 
                 Directory.CreateDirectory(uploadDirectory);

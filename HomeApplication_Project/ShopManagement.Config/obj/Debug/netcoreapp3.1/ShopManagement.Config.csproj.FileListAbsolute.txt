@@ -32,3 +32,9 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManageme
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManagement.Config\obj\Debug\netcoreapp3.1\ShopManagement.Config.csproj.CopyComplete
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManagement.Config\obj\Debug\netcoreapp3.1\ShopManagement.Config.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManagement.Config\obj\Debug\netcoreapp3.1\ShopManagement.Config.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManagement.Config\bin\Debug\netcoreapp3.1\BlogManagement.Application.Contracts.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManagement.Config\bin\Debug\netcoreapp3.1\BlogManagement.Domain.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManagement.Config\bin\Debug\netcoreapp3.1\BlogManagement.Infrastructure.EFCore.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManagement.Config\bin\Debug\netcoreapp3.1\BlogManagement.Application.Contracts.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManagement.Config\bin\Debug\netcoreapp3.1\BlogManagement.Domain.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManagement.Config\bin\Debug\netcoreapp3.1\BlogManagement.Infrastructure.EFCore.pdb

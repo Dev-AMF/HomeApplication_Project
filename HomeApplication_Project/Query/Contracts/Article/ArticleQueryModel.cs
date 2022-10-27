@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Query.Contracts.Comment;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -22,5 +23,6 @@ namespace Query.Contracts.Article
         public long CategoryId { get; set; }
         public string CategoryName { get; set; }
         public string CategorySlug { get; set; }
+        public List<CommentQueryModel> Comments { get; set; }
     }
 }

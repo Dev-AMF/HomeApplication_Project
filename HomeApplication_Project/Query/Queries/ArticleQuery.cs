@@ -2,6 +2,7 @@
 using BlogManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
 using Query.Contracts.Article;
+using Query.Contracts.Comment;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,12 @@ namespace Query.Queries
     public class ArticleQuery : IArticleQuery
     {
         private readonly At_HomeApplicationBlogContext _context;
+        private readonly ICommentQuery _commentQuery;
 
-        public ArticleQuery(At_HomeApplicationBlogContext context)
+        public ArticleQuery(At_HomeApplicationBlogContext context, ICommentQuery commentQuery)
         {
             _context = context;
+            _commentQuery = commentQuery;
         }
 
         public ArticleQueryModel GetArticleDetails(string slug)
@@ -25,6 +28,8 @@ namespace Query.Queries
                .Where(AC => AC.PublishDate <= DateTime.Now)
                .Select(AC => new ArticleQueryModel
                {
+                   Id = AC.Id,
+                   CategoryId = AC.CategoryId,
                    Title = AC.Title,
                    CategoryName = AC.Category.Name,
                    CategorySlug = AC.Category.Slug,
@@ -43,6 +48,8 @@ namespace Query.Queries
 
             if (!string.IsNullOrWhiteSpace(article.Keywords))
                 article.KeywordList = article.Keywords.Split("،").ToList();
+
+            article.Comments = _commentQuery.GetCommentsByArticle(article.Id);
 
             return article;
         }

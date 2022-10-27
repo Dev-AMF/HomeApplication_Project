@@ -1,4 +1,5 @@
-﻿using _0_Framework.Domain;
+﻿using _0_Framework.Application;
+using _0_Framework.Domain;
 using CommnetManagement.Infrastructure.EFCore;
 using Query.Contracts.Comment;
 using ShopManagement.Infrastructure.EFCore;
@@ -18,22 +19,50 @@ namespace Query.Queries
             _conetxt = conetxt;
         }
 
-        
-
-        List<CommentQueryModel> ICommentQuery.GetCommentsByProduct(int id)
+        public List<CommentQueryModel> GetCommentsByArticle(int id)
         {
-            return _conetxt.Comments
-                   .Where(C => C.OwnerRecordId == id)
-                   .Where(C => C.Status == ApprovalStats.CommentStatus.Approved)
-                   .Select(C => new CommentQueryModel
-                   {
-                       Id = C.Id,
-                       Name = C.Name,
-                       Message = C.Message
 
-                   })
-                   .OrderByDescending( Cqm => Cqm.Id)
-                   .ToList();
+         var comments =  _conetxt.Comments
+                         .Where(C => C.OwnerRecordId == id)
+                         .Where(C => C.Status == ApprovalStats.CommentStatus.Approved)
+                         .Where(C => C.Type == CommentType.Types.Article)
+                         .Select(C => new CommentQueryModel
+                         {
+                             Id = C.Id,
+                             Message = C.Message,
+                             Name = C.Name,
+                             ParentId = C.ParentId,
+                             CreationDate = C.CreationDate.ToFarsi()
+
+                         })
+                         .OrderByDescending(Cqm => Cqm.Id)
+                         .ToList();
+            
+
+            foreach (var item in comments)
+            {
+                if (item.ParentId > 0)
+                    item.ParentName = comments.FirstOrDefault(C => C.Id == item.ParentId)?.Name;
+            }
+
+            return comments;
+        }
+
+        public List<CommentQueryModel> GetCommentsByProduct(int id)
+        {
+                return _conetxt.Comments
+                       .Where(C => C.OwnerRecordId == id)
+                       .Where(C => C.Status == ApprovalStats.CommentStatus.Approved)
+                       .Where(C => C.Type == CommentType.Types.Product )
+                       .Select(C => new CommentQueryModel
+                       {
+                           Id = C.Id,
+                           Name = C.Name,
+                           Message = C.Message
+
+                       })
+                       .OrderByDescending(Cqm => Cqm.Id)
+                       .ToList();
         }
     }
 }

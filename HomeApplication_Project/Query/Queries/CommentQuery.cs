@@ -1,5 +1,6 @@
-﻿using Query.Contracts.Comment;
-using ShopManagement.Domain.CommentAgg;
+﻿using _0_Framework.Domain;
+using CommnetManagement.Infrastructure.EFCore;
+using Query.Contracts.Comment;
 using ShopManagement.Infrastructure.EFCore;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,9 @@ namespace Query.Queries
 {
     public class CommentQuery : ICommentQuery
     {
-        private readonly At_HomeApplicationContext _conetxt;
+        private readonly At_HomeApplicationCommentContext _conetxt;
 
-        public CommentQuery(At_HomeApplicationContext conetxt)
+        public CommentQuery(At_HomeApplicationCommentContext conetxt)
         {
             _conetxt = conetxt;
         }
@@ -22,8 +23,8 @@ namespace Query.Queries
         List<CommentQueryModel> ICommentQuery.GetCommentsByProduct(int id)
         {
             return _conetxt.Comments
-                   .Where(C => C.ProductId == id)
-                   .Where(C => C.Status == _0_Framework.Domain.ApprovalStats.CommentStatus.Approved)
+                   .Where(C => C.OwnerRecordId == id)
+                   .Where(C => C.Status == ApprovalStats.CommentStatus.Approved)
                    .Select(C => new CommentQueryModel
                    {
                        Id = C.Id,

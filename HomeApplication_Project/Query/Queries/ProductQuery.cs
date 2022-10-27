@@ -220,7 +220,6 @@ namespace Query.Queries
                            //.Include(P => P.Picture)
                            //.Include(P => P.Metas)
                            .Include(P => P.Category)
-                           .Include(P => P.Comments)
                            .Select(P => new ProductQueryModel
                            {
                                Id = P.Id,

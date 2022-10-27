@@ -88,7 +88,7 @@ namespace ShopManagement.Application
             }
             else
             {
-                return result.Failed(ApplicationMessage.RecordNotFound);
+                return result.Failed(ApplicationMessages.RecordNotFound);
             }
             
         }
@@ -112,7 +112,7 @@ namespace ShopManagement.Application
             }
             else
             {
-                return result.Failed(ApplicationMessage.RecordNotFound);
+                return result.Failed(ApplicationMessages.RecordNotFound);
             }
         }
 
@@ -130,7 +130,7 @@ namespace ShopManagement.Application
             }
             else
             {
-                return result.Failed(ApplicationMessage.RecordNotFound);
+                return result.Failed(ApplicationMessages.RecordNotFound);
             }
         }
 

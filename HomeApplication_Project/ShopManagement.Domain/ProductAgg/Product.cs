@@ -1,5 +1,4 @@
 ﻿using _0_Framework.Domain;
-using ShopManagement.Domain.CommentAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureSliderAgg;
 using System;
@@ -21,12 +20,11 @@ namespace ShopManagement.Domain.ProductAgg
 
         public ProductPicture Picture { get; private set; }
         
-
         public ProductPageMetas Metas { get; private set; }
         
-
         public ICollection<ProductPictureSlider> ProductPicturesSlider { get; private set; }
-        public ICollection<Comment> Comments { get; private set; }
+        
+
 
         protected Product()
         {

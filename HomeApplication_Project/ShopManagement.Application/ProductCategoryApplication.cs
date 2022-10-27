@@ -24,7 +24,7 @@ namespace ShopManagement.Application
 
             if (_repository.Exists( PC => PC.Name == command.Name) )
             {
-                return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists, command.Name));
+                return result.Failed(String.Format(ApplicationMessages.RecordAlreadyExists, command.Name));
             }
             else
             {
@@ -48,7 +48,7 @@ namespace ShopManagement.Application
             {
                 if (_repository.Exists(PC => PC.Name == command.Name && PC.Id != command.Id))
                 {
-                    return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists, command.Name));
+                    return result.Failed(String.Format(ApplicationMessages.RecordAlreadyExists, command.Name));
                 }
                 else
                 {
@@ -75,7 +75,7 @@ namespace ShopManagement.Application
             }
             else
             {
-                return result.Failed(ApplicationMessage.RecordNotFound);
+                return result.Failed(ApplicationMessages.RecordNotFound);
             }
         }
 

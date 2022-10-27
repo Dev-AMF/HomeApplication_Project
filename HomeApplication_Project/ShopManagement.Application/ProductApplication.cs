@@ -29,7 +29,7 @@ namespace ShopManagement.Application
             if (_repository.Exists(P => P.Name == command.Name))
             {
 
-                return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists, command.Name));
+                return result.Failed(String.Format(ApplicationMessages.RecordAlreadyExists, command.Name));
             }
             else
             {
@@ -57,7 +57,7 @@ namespace ShopManagement.Application
             {
                 if (_repository.Exists(PC => PC.Name == command.Name && PC.Id != command.Id))//اگر داشت نام را برای یک آیدی دیگر ثبت میکرد
                 {
-                    return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists, command.Name));
+                    return result.Failed(String.Format(ApplicationMessages.RecordAlreadyExists, command.Name));
                 }
                 else
                 {
@@ -86,7 +86,7 @@ namespace ShopManagement.Application
             }
             else
             {
-                return result.Failed(ApplicationMessage.RecordNotFound);
+                return result.Failed(ApplicationMessages.RecordNotFound);
             }
         }
 

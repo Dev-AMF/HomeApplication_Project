@@ -59,9 +59,6 @@ namespace ShopManagement.Infrastructure.EFCore.Mapping
                    .WithOne(PPS => PPS.Product)
                    .HasForeignKey(PPS => PPS.ProductId);
 
-            builder.HasMany(P => P.Comments)
-                   .WithOne(C => C.Product)
-                   .HasForeignKey(C => C.ProductId);
         }
     }
 }

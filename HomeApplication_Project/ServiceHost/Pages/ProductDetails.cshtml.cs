@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CommentManagement.Application.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Query.Contracts.Product;
-using ShopManagement.Application.Contracts.CommentAgg;
+
 
 namespace ServiceHost.Pages
 {
@@ -27,7 +28,10 @@ namespace ServiceHost.Pages
         }
         public IActionResult OnPost(AddComment command, string productSlug)
         {
+            command.Type = _0_Framework.Domain.CommentType.Types.Product;
+
             var result = _commentApplication.Add(command);
+
             return RedirectToPage("/ProductDetails", productSlug);
         }
     }

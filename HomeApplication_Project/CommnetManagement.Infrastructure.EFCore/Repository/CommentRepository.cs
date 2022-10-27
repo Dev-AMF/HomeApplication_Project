@@ -1,19 +1,19 @@
 ﻿using _0_Framework.Application;
 using _0_Framework.Infrastructure;
-using Microsoft.EntityFrameworkCore;
-using ShopManagement.Application.Contracts.CommentAgg;
-using ShopManagement.Domain.CommentAgg;
+using CommentManagement.Application.Contracts;
+using CommentManagement.Domain.CommentAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ShopManagement.Infrastructure.EFCore.Repository
+namespace CommnetManagement.Infrastructure.EFCore.Repository
 {
     public class CommentRepository : RepositoryBase<int, Comment>, ICommentRepository
     {
-        private readonly At_HomeApplicationContext _context;
-        public CommentRepository(At_HomeApplicationContext context): base(context)
+        private readonly At_HomeApplicationCommentContext _context;
+
+        public CommentRepository(At_HomeApplicationCommentContext context) : base(context)
         {
             _context = context;
         }
@@ -21,16 +21,16 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         public List<CommentViewModel> Search(CommentSearchModel searchModel)
         {
             var query = _context.Comments
-                .Include(x => x.Product)
                 .Select(C => new CommentViewModel
                 {
                     Id = C.Id,
-                    Email = C.Email,
-                    Status = C.Status,
-                    Message = C.Message,
                     Name = C.Name,
-                    ProductId = C.ProductId,
-                    ProductName = C.Product.Name,
+                    Email = C.Email,
+                    Website = C.Website,
+                    Message = C.Message,
+                    OwnerRecordId = C.OwnerRecordId,
+                    Type = C.Type,
+                    Status = C.Status,
                     CommentDate = C.CreationDate.ToFarsi()
                 });
 

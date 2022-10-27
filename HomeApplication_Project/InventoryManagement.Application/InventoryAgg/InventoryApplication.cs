@@ -23,7 +23,7 @@ namespace InventoryManagement.Application.InventoryAgg
 
             if (_repository.Exists(I => I.ProductId == command.ProductId))
             {
-                result.Failed(ApplicationMessage.RecordAlreadyExistsNonArgument);
+                result.Failed(ApplicationMessages.RecordAlreadyExistsNonArgument);
             }
             else
             {
@@ -43,7 +43,7 @@ namespace InventoryManagement.Application.InventoryAgg
             var inventory = _repository.Get(command.InventoryId);
 
             if (inventory == null)
-                return operation.Failed(ApplicationMessage.RecordNotFound);
+                return operation.Failed(ApplicationMessages.RecordNotFound);
 
             
             inventory.Decrease(command.Count, 1, command.Description, 0);
@@ -76,12 +76,12 @@ namespace InventoryManagement.Application.InventoryAgg
 
             if (inventory != null)
             {
-                result.Failed(ApplicationMessage.RecordNotFound);
+                result.Failed(ApplicationMessages.RecordNotFound);
             }
             if (_repository.Exists(I => I.ProductId == command.ProductId &&
                                    I.Id != command.Id))// 
             {
-                result.Failed(ApplicationMessage.RecordAlreadyExistsNonArgument);
+                result.Failed(ApplicationMessages.RecordAlreadyExistsNonArgument);
             }
             else
             {
@@ -109,7 +109,7 @@ namespace InventoryManagement.Application.InventoryAgg
             var inventory = _repository.Get(command.InventoryId);
             
             if (inventory == null)
-                return operation.Failed(ApplicationMessage.RecordNotFound);
+                return operation.Failed(ApplicationMessages.RecordNotFound);
 
             
             inventory.Increase(command.Count, 1 , command.Description);

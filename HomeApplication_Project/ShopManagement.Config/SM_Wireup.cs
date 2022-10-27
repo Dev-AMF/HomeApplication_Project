@@ -7,12 +7,10 @@ using Query.Contracts.ProductPictureSlider;
 using Query.Contracts.Slide;
 using Query.Queries;
 using ShopManagement.Application;
-using ShopManagement.Application.Contracts.CommentAgg;
 using ShopManagement.Application.Contracts.ProductAgg;
 using ShopManagement.Application.Contracts.ProductCategoryAgg;
 using ShopManagement.Application.Contracts.ProductPictureSliderAgg;
 using ShopManagement.Application.Contracts.SlideAgg;
-using ShopManagement.Domain.CommentAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureSliderAgg;
@@ -33,9 +31,6 @@ namespace ShopManagement.Config
             services.AddTransient<IProductApplication, ProductApplication>();
             services.AddTransient<IProductRepository, ProductRepository>();
 
-            services.AddTransient<ICommentApplication, CommentApplication>();
-            services.AddTransient<ICommentRepository, CommentRepository>();
-
 
             services.AddTransient<IProductPictureSliderApplication, ProductPictureSliderApplication>();
             services.AddTransient<IProductPictureSliderRepository, ProductPictureSliderRepository>();
@@ -48,7 +43,6 @@ namespace ShopManagement.Config
             services.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
             services.AddTransient<IProductQuery, ProductQuery>();
             services.AddTransient<IProductPictureSliderQuery, ProductPictureSliderQuery>();
-            services.AddTransient<ICommentQuery, CommentQuery>();
 
             //services.AddTransient<IUnitofwork, UnitofworkEf>();
 

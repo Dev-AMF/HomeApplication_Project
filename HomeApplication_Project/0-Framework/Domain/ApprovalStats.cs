@@ -4,7 +4,7 @@ using System.Text;
 
 namespace _0_Framework.Domain
 {
-    public class ApprovalStats
+    public static class ApprovalStats
     {
         public enum CommentStatus
         {

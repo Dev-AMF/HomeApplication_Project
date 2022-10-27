@@ -28,7 +28,7 @@ namespace BlogManagement.Application
             if (_repository.Exists(A => A.Name == command.Name))
             {
 
-                return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists, command.Name));
+                return result.Failed(String.Format(ApplicationMessages.RecordAlreadyExists, command.Name));
             }
             else
             {
@@ -56,7 +56,7 @@ namespace BlogManagement.Application
             {
                 if (_repository.Exists(PC => PC.Name == command.Name && PC.Id != command.Id))//اگر داشت نام را برای یک آیدی دیگر ثبت میکرد
                 {
-                    return result.Failed(String.Format(ApplicationMessage.RecordAlreadyExists, command.Name));
+                    return result.Failed(String.Format(ApplicationMessages.RecordAlreadyExists, command.Name));
                 }
                 else
                 {
@@ -85,7 +85,7 @@ namespace BlogManagement.Application
             }
             else
             {
-                return result.Failed(ApplicationMessage.RecordNotFound);
+                return result.Failed(ApplicationMessages.RecordNotFound);
             }
         }
 

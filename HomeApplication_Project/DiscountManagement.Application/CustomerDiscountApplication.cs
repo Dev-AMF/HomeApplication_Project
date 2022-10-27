@@ -21,7 +21,7 @@ namespace DiscountManagement.Application
 
             if (_repository.Exists(CD => CD.ProductId ==  command.ProductId && CD.DiscountRate == command.DiscountRate))
             {
-                result.Failed(ApplicationMessage.RecordAlreadyExistsNonArgument);
+                result.Failed(ApplicationMessages.RecordAlreadyExistsNonArgument);
             }
             else
             {
@@ -43,13 +43,13 @@ namespace DiscountManagement.Application
 
             if (discount != null)
             {
-                result.Failed(ApplicationMessage.RecordNotFound);
+                result.Failed(ApplicationMessages.RecordNotFound);
             }
             if (_repository.Exists(CD => CD.ProductId == command.ProductId && 
                                    CD.DiscountRate == command.DiscountRate && 
                                    CD.Id != command.Id))// ثبت یک کد تخفیف با درصد تکراری برای یک کالا 
             {
-                result.Failed(ApplicationMessage.RecordAlreadyExistsNonArgument);
+                result.Failed(ApplicationMessages.RecordAlreadyExistsNonArgument);
             }
             else
             {

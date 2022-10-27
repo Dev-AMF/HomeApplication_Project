@@ -22,7 +22,7 @@ namespace DiscountManagement.Application
 
             if (_repository.Exists(COD => COD.ProductId == command.ProductId && COD.DiscountRate == command.DiscountRate))
             {
-                result.Failed(ApplicationMessage.RecordAlreadyExistsNonArgument);
+                result.Failed(ApplicationMessages.RecordAlreadyExistsNonArgument);
             }
             else
             {
@@ -43,13 +43,13 @@ namespace DiscountManagement.Application
 
             if (discount != null)
             {
-                result.Failed(ApplicationMessage.RecordNotFound);
+                result.Failed(ApplicationMessages.RecordNotFound);
             }
             if (_repository.Exists(COD => COD.ProductId == command.ProductId &&
                                    COD.DiscountRate == command.DiscountRate &&
                                    COD.Id != command.Id))// ثبت یک کد تخفیف با درصد تکراری برای یک کالا 
             {
-                result.Failed(ApplicationMessage.RecordAlreadyExistsNonArgument);
+                result.Failed(ApplicationMessages.RecordAlreadyExistsNonArgument);
             }
             else
             {
@@ -72,7 +72,7 @@ namespace DiscountManagement.Application
             var colleagueDiscount = _repository.Get(id);
             
             if (colleagueDiscount == null)
-                return operation.Failed(ApplicationMessage.RecordNotFound);
+                return operation.Failed(ApplicationMessages.RecordNotFound);
 
             colleagueDiscount.Remove();
 
@@ -87,7 +87,7 @@ namespace DiscountManagement.Application
             var colleagueDiscount = _repository.Get(id);
 
             if (colleagueDiscount == null)
-                return operation.Failed(ApplicationMessage.RecordNotFound);
+                return operation.Failed(ApplicationMessages.RecordNotFound);
 
             colleagueDiscount.Restore();
 

@@ -1,3 +1,11 @@
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.csprojAssemblyReference.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.AssemblyInfoInputs.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.AssemblyInfo.cs
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.csproj.CoreCompileInputs.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.MvcApplicationPartsAssemblyInfo.cs
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.MvcApplicationPartsAssemblyInfo.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.RazorAssemblyInfo.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.RazorAssemblyInfo.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\appsettings.Development.json
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\appsettings.json
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -130,6 +138,11 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\BlogManagement.Domain.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\BlogManagement.Infrastructure.Config.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\BlogManagement.Infrastructure.EFCore.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\CommentManagement.Application.Contracts.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\CommentManagement.Application.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\CommentManagement.Domain.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\CommentManagement.Infrastructure.Config.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\CommnetManagement.Infrastructure.EFCore.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\DiscountManagement.Application.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\DiscountManagement.Domain.dll
@@ -147,6 +160,7 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\ShopManagement.Domain.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\BlogManagement.Infrastructure.Config.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\CommentManagement.Infrastructure.Config.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.Config.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.Config.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\ShopManagement.Config.pdb
@@ -155,6 +169,10 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\BlogManagement.Application.Contracts.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\BlogManagement.Domain.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\BlogManagement.Infrastructure.EFCore.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\CommentManagement.Application.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\CommentManagement.Application.Contracts.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\CommentManagement.Domain.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\CommnetManagement.Infrastructure.EFCore.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\DiscountManagement.Application.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\DiscountManagement.Domain.pdb
@@ -168,14 +186,6 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contracts.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\ShopManagement.Domain.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.pdb
-K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.csprojAssemblyReference.cache
-K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.AssemblyInfoInputs.cache
-K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.AssemblyInfo.cs
-K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.csproj.CoreCompileInputs.cache
-K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.MvcApplicationPartsAssemblyInfo.cs
-K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.MvcApplicationPartsAssemblyInfo.cache
-K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.RazorAssemblyInfo.cache
-K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.RazorAssemblyInfo.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.TagHelpers.input.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.TagHelpers.output.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.RazorCoreGenerate.cache
@@ -185,6 +195,7 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Blog\Articles\Create.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Blog\Articles\Edit.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Blog\Articles\Index.cshtml.g.cs
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Comments\Index.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Discount\ColleagueDiscounts\Create.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Discount\ColleagueDiscounts\Edit.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Discount\ColleagueDiscounts\Index.cshtml.g.cs
@@ -201,7 +212,6 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Shared\_AdminLayout.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Shared\_Menu.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Shop\Comments\Index.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Shop\ProductCategories\Create.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Shop\ProductCategories\Edit.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Shop\ProductCategories\Index.cshtml.g.cs

@@ -6,6 +6,7 @@ using System.Text.Unicode;
 using System.Threading.Tasks;
 using _0_Framework.Application.Contracts;
 using BlogManagement.Infrastructure.Config;
+using CommentManagement.Infrastructure.Config;
 using DiscountManagement.Infrastructure.Config;
 using InventoryManagement.Infrastructure.Config;
 using Microsoft.AspNetCore.Builder;
@@ -36,6 +37,7 @@ namespace ServiceHost
             DM_Wireup.DoConfig(services, Configuration.GetConnectionString("HomeApplicationDiscountContext"));
             IM_Wireup.DoConfig(services, Configuration.GetConnectionString("At_HomeApplicationInventoryContext"));
             BM_Wireup.DoConfig(services, Configuration.GetConnectionString("At_HomeApplicationBlogContext"));
+            CM_Wireup.DoConfig(services, Configuration.GetConnectionString("At_HomeApplicationCommentContext")); 
 
             services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Arabic));
 

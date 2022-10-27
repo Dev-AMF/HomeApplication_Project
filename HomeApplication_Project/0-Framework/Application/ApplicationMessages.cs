@@ -4,7 +4,7 @@ using System.Text;
 
 namespace _0_Framework.Application
 {
-    public static class ApplicationMessage
+    public static class ApplicationMessages
     {
         public const string RecordAlreadyExists = "Another Record With Name-{0}-Already Exists!,";
         public const string RecordNotFound = "There Is Not Any Records Matching With The Given Information!";

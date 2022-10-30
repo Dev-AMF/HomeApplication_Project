@@ -1,5 +1,4 @@
 ﻿using _0_Framework.Application;
-using _0_Framework.Application.Contracts;
 using ShopManagement.Application.Contracts.SlideAgg;
 using ShopManagement.Domain.SlideAgg;
 using System;

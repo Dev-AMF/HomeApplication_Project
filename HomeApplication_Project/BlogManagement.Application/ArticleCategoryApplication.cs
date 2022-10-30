@@ -1,5 +1,4 @@
 ﻿using _0_Framework.Application;
-using _0_Framework.Application.Contracts;
 using BlogManagement.Application.Contracts.ArticleCategory;
 using BlogManagement.Domain.ArticleCategoryAgg;
 using System;

@@ -4,13 +4,16 @@ using System.Linq;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using System.Threading.Tasks;
-using _0_Framework.Application.Contracts;
+using _0_Framework.Application;
+using Account.Management.Infrastructure.EFCore;
 using BlogManagement.Infrastructure.Config;
 using CommentManagement.Infrastructure.Config;
 using DiscountManagement.Infrastructure.Config;
 using InventoryManagement.Infrastructure.Config;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,16 +35,33 @@ namespace ServiceHost
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpContextAccessor();
 
             SM_Wireup.DoConfig(services , Configuration.GetConnectionString("HomeApplicationContext"));
             DM_Wireup.DoConfig(services, Configuration.GetConnectionString("HomeApplicationDiscountContext"));
             IM_Wireup.DoConfig(services, Configuration.GetConnectionString("At_HomeApplicationInventoryContext"));
             BM_Wireup.DoConfig(services, Configuration.GetConnectionString("At_HomeApplicationBlogContext"));
-            CM_Wireup.DoConfig(services, Configuration.GetConnectionString("At_HomeApplicationCommentContext")); 
+            CM_Wireup.DoConfig(services, Configuration.GetConnectionString("At_HomeApplicationCommentContext"));
+            AM_Wireup.DoConfig(services, Configuration.GetConnectionString("At_HomeApplicationAccountContext"));
 
             services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Arabic));
 
             services.AddTransient<IFileUploader, FileUploader>();
+            services.AddSingleton<IPasswordHasher, PasswordHasher>();
+            services.AddTransient<IAuthHelper, AuthHelper>();
+
+            services.Configure<CookiePolicyOptions>(options => {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.Strict;
+            });
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, o => {
+                    o.LoginPath = new PathString("/Users");
+                    o.LogoutPath = new PathString("/Users");
+                    o.AccessDeniedPath = new PathString("/AccessDenied");
+                });
+
             services.AddRazorPages();
         }
 
@@ -59,8 +79,13 @@ namespace ServiceHost
                 app.UseHsts();
             }
 
+            app.UseAuthentication();
+
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
+
+            app.UseCookiePolicy();
 
             app.UseRouting();
 

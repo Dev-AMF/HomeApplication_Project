@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace _0_Framework.Application
 {
-    public static class AppTools
+    public static class CultureTools
     {
         public static string[] MonthNames =
             {"فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند"};

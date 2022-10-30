@@ -11,6 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AccountManagement.Infrastructure.Config\AccountManagement.Infrastructure.Config.csproj" />
+    <ProjectReference Include="..\AccountMangement.Infrastructure.EFCore\AccountMangement.Infrastructure.EFCore.csproj" />
     <ProjectReference Include="..\BlogManagement.Infrastructure.Config\BlogManagement.Infrastructure.Config.csproj" />
     <ProjectReference Include="..\CommentManagement.Infrastructure.Config\CommentManagement.Infrastructure.Config.csproj" />
     <ProjectReference Include="..\DiscountManagement.Infrastructure.Config\DiscountManagement.Infrastructure.Config.csproj" />

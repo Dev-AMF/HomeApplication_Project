@@ -12,6 +12,7 @@ namespace AccountManagement.Application.Contracts.Account
         EditAccount GetDetails(int id);
         
         OperationResult Create(CreateAccount command);
+        OperationResult Register(CreateAccount command);
         OperationResult Edit(EditAccount command);
         OperationResult ChangePassword(ChangePassword command);
         

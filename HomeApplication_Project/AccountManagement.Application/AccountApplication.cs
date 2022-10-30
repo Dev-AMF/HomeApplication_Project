@@ -119,6 +119,12 @@ namespace AccountManagement.Application
             _authHelper.SignOut();
         }
 
+        public OperationResult Register(CreateAccount command)
+        {
+            command.RoleId = 3; // Website's User
+            return Create(command);
+        }
+
         public List<AccountViewModel> Search(AccountSearchModel searchModel)
         {
             return _accountRepository.Search(searchModel);

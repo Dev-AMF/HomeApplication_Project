@@ -54,7 +54,8 @@ body {
 
 .header-cart-icon .counter {
     left: 0;
-    right: 100%;
+    right: 94%;
+    top: auto;
 }
 
 .header-icon-wrapper > ul > li {

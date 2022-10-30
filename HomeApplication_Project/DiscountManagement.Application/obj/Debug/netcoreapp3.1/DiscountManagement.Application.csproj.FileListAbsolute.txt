@@ -17,3 +17,4 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountMana
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.csproj.CopyComplete
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.csprojAssemblyReference.cache

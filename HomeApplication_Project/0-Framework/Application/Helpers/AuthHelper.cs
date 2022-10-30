@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using _0_Framework.Domain;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using System;
@@ -50,6 +51,29 @@ namespace _0_Framework.Application
         public void SignOut()
         {
             _contextAccessor.HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        }
+
+        public AuthViewModel CurrentAccountInfo()
+        {
+            var result = new AuthViewModel();
+            if (!IsAuthenticated())
+                return result;
+
+            var claims = _contextAccessor.HttpContext.User.Claims.ToList();
+            result.Id = int.Parse(claims.FirstOrDefault(x => x.Type == "AccountId").Value);
+            result.Username = claims.FirstOrDefault(x => x.Type == "Username").Value;
+            result.RoleId = int.Parse(claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value);
+            result.Fullname = claims.FirstOrDefault(x => x.Type == ClaimTypes.Name).Value;
+            result.RoleName = Roles.GetRoleBy(result.RoleId);
+                
+            return result;
+        }
+
+        public string CurrentAccountRole()
+        {
+            if (IsAuthenticated())
+                return _contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value;
+            return null;
         }
     }
 }

@@ -243,6 +243,7 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\Shop\Slides\Index.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\_ViewImports.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Pages\_ViewStart.cshtml.g.cs
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\AccessDenied.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\ArticleCategory.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\ArticleDetails.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
@@ -272,4 +273,3 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.genruntimeconfig.cache
-K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\AccessDenied.cshtml.g.cs

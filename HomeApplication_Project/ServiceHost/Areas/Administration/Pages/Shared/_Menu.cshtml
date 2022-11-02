@@ -34,7 +34,7 @@
                     <a asp-page="/Comments/Index" class="waves-effect"><i class="md md-home"></i><span> کامنت ها </span></a>
                 </li>
 
-                @if (AuthHelper.CurrentAccountRole() == _0_Framework.Domain.Roles.Administator)
+                @if (AuthHelper.CurrentAccountRole() == _0_Framework.Domain.Roles.Administator || AuthHelper.CurrentAccountRole() == _0_Framework.Domain.Roles.SystemUser)
                 {
 
                     <li>

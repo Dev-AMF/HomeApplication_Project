@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using _0_Framework.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Query.Contracts.Comment;
 using Query.Contracts.Product;
@@ -11,6 +12,7 @@ using ShopManagement.Application.Contracts.ProductAgg;
 using ShopManagement.Application.Contracts.ProductCategoryAgg;
 using ShopManagement.Application.Contracts.ProductPictureSliderAgg;
 using ShopManagement.Application.Contracts.SlideAgg;
+using ShopManagement.Config.Permissions;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureSliderAgg;
@@ -44,7 +46,7 @@ namespace ShopManagement.Config
             services.AddTransient<IProductQuery, ProductQuery>();
             services.AddTransient<IProductPictureSliderQuery, ProductPictureSliderQuery>();
 
-            //services.AddTransient<IUnitofwork, UnitofworkEf>();
+            services.AddTransient<IPermissionExposer, ShopPermissionExposer>();
 
             services.AddDbContext<At_HomeApplicationContext>(
                 options =>

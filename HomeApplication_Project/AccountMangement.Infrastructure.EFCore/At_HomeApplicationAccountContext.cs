@@ -10,6 +10,7 @@ namespace AccountMangement.Infrastructure
     {
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<Permission> Permissions { get; set; }
 
         public At_HomeApplicationAccountContext(DbContextOptions<At_HomeApplicationAccountContext> options) : base(options)
         {

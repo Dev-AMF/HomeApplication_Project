@@ -20,6 +20,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ServiceHost.Helpers;
+using ServiceHost.PageFilters;
 using ShopManagement.Config;
 
 namespace ServiceHost
@@ -51,13 +52,15 @@ namespace ServiceHost
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddTransient<IAuthHelper, AuthHelper>();
 
-            services.Configure<CookiePolicyOptions>(options => {
+            services.Configure<CookiePolicyOptions>(options =>
+            {
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.Strict;
             });
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, o => {
+                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, o =>
+                {
                     o.LoginPath = new PathString("/Users");
                     o.LogoutPath = new PathString("/Users");
                     o.AccessDeniedPath = new PathString("/AccessDenied");
@@ -69,7 +72,7 @@ namespace ServiceHost
                 builder => builder.RequireRole(new List<string> { Roles.Administator, Roles.SystemUser }));
 
                 options.AddPolicy("Shop",
-                builder => builder.RequireRole(new List<string> { Roles.Administator }));
+                builder => builder.RequireRole(new List<string> { Roles.Administator, Roles.SystemUser }));
 
                 options.AddPolicy("Discount",
                 builder => builder.RequireRole(new List<string> { Roles.Administator }));
@@ -79,6 +82,7 @@ namespace ServiceHost
             });
 
             services.AddRazorPages()
+                .AddMvcOptions(options => options.Filters.Add<SecurityPageFilter>())
                 .AddRazorPagesOptions(options =>
                 {
                     options.Conventions.AuthorizeAreaFolder("Administration", "/", "AdminArea");
@@ -86,7 +90,8 @@ namespace ServiceHost
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Shop", "Shop");
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Discounts", "Discount");
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Accounts", "Account");
-                });
+                })
+            ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

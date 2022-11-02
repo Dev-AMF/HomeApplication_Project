@@ -9,7 +9,6 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryMan
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application\bin\Debug\netcoreapp3.1\InventoryManagement.Domain.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application\bin\Debug\netcoreapp3.1\0-Framework.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contracts.pdb
-K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application\obj\Debug\netcoreapp3.1\InventoryManagement.Application.csprojAssemblyReference.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application\obj\Debug\netcoreapp3.1\InventoryManagement.Application.AssemblyInfoInputs.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application\obj\Debug\netcoreapp3.1\InventoryManagement.Application.AssemblyInfo.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application\obj\Debug\netcoreapp3.1\InventoryManagement.Application.csproj.CoreCompileInputs.cache

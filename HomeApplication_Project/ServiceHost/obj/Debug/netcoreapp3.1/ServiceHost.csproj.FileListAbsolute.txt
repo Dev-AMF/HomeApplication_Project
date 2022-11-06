@@ -19,6 +19,7 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
@@ -31,9 +32,11 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -49,6 +52,7 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Nancy.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
@@ -246,6 +250,7 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\AccessDenied.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\ArticleCategory.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\ArticleDetails.cshtml.g.cs
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\Cart.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
@@ -273,3 +278,4 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.genruntimeconfig.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\Checkout.cshtml.g.cs

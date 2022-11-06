@@ -13,3 +13,4 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManageme
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.csproj.CopyComplete
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.csprojAssemblyReference.cache

@@ -9,6 +9,8 @@ namespace ShopManagement.Domain.ProductAgg
 {
     public interface IProductRepository : IRepository<int, Product>
     {
+
+        public string GetSlugBy(int id);
         public Product GetIncludings(int id);
         EditProduct GetDetails(int id);
 

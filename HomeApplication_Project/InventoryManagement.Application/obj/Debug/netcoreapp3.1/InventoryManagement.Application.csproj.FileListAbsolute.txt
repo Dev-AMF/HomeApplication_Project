@@ -15,3 +15,4 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryMan
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application\obj\Debug\netcoreapp3.1\InventoryManagement.Application.csproj.CopyComplete
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application\obj\Debug\netcoreapp3.1\InventoryManagement.Application.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application\obj\Debug\netcoreapp3.1\InventoryManagement.Application.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\S10~\HomeApplication_Project\InventoryManagement.Application\obj\Debug\netcoreapp3.1\InventoryManagement.Application.csprojAssemblyReference.cache

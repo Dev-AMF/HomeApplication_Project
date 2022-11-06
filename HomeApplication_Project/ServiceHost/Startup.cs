@@ -52,11 +52,11 @@ namespace ServiceHost
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddTransient<IAuthHelper, AuthHelper>();
 
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.Strict;
-            });
+            //services.Configure<CookiePolicyOptions>(options =>
+            //{
+            //    options.CheckConsentNeeded = context => true;
+            //    //options.MinimumSameSitePolicy = SameSiteMode.Strict;
+            //});
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, o =>

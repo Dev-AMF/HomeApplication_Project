@@ -60,6 +60,14 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
 
                 }).ToList();
         }
+        
+        public string GetSlugBy(int id)
+        {
+            return _context.Products
+                           .FirstOrDefault(AC => AC.Id == id)
+                           .Metas.Slug;
+                    
+        }
 
         public List<ProductViewModel> Search(ProductSearchModel searchModel)
         {

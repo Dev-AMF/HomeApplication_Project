@@ -1,6 +1,7 @@
 ﻿using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Query.Contracts.CartServices;
 using Query.Contracts.Comment;
 using Query.Contracts.Product;
 using Query.Contracts.ProductCategory;
@@ -47,6 +48,8 @@ namespace ShopManagement.Config
             services.AddTransient<IProductPictureSliderQuery, ProductPictureSliderQuery>();
 
             services.AddTransient<IPermissionExposer, ShopPermissionExposer>();
+
+            services.AddTransient<ICartCalculatorService, CartCalculatorService>();
 
             services.AddDbContext<At_HomeApplicationContext>(
                 options =>

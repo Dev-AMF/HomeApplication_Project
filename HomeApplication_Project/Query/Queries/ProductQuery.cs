@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Query.Contracts.Comment;
 using Query.Contracts.Product;
 using Query.Contracts.ProductPictureSlider;
+using ShopManagement.Application.Contracts.Order;
+using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Infrastructure.EFCore;
 using System;
 using System.Collections.Generic;
@@ -19,19 +21,22 @@ namespace Query.Queries
         private readonly At_HomeApplicationInventoryContext _inventoryContext;
         private readonly At_HomeApplicationDiscountContext _discountContext;
         private readonly IProductPictureSliderQuery _sliderQuery;
+        private readonly IProductRepository _repository;
         private readonly ICommentQuery _commentQuery;
 
         public ProductQuery(At_HomeApplicationContext context,
                             At_HomeApplicationInventoryContext inventoryContext,
                             At_HomeApplicationDiscountContext discountContext,
-                            IProductPictureSliderQuery sliderQuery, 
-                            ICommentQuery commentQuery)
+                            IProductPictureSliderQuery sliderQuery,
+                            IProductRepository repository,
+                            ICommentQuery commentQuery )
         {
             _context = context;
             _inventoryContext = inventoryContext;
             _discountContext = discountContext;
             _sliderQuery = sliderQuery;
             _commentQuery = commentQuery;
+            _repository = repository;
         }
 
         public List<ProductQueryModel> GetLatestProductsBy(int count)
@@ -254,6 +259,7 @@ namespace Query.Queries
 
                 
                     Pqm.Price = UnitPrice.ToMoney();
+                    Pqm.NumericPrice = UnitPrice;
                     
 
                 if (discounts.FirstOrDefault(Cd => Cd.ProductId == Pqm.Id) != null)
@@ -272,6 +278,26 @@ namespace Query.Queries
                 }
 
             return Pqm;
+        }
+
+
+        public List<CartItem> CheckInventoryStatus(List<CartItem> cartItems)
+        {
+            var inventory = _inventoryContext.Inventory.ToList();
+
+            foreach (var cartItem in cartItems.Where(cartItem =>
+                inventory.Any(I => I.ProductId == cartItem.Id && I.InStock)))
+            {
+                var itemInventory = inventory.Find(I => I.ProductId == cartItem.Id);
+                cartItem.IsInStock = itemInventory.CalculateCurrentCount() >= cartItem.Count;
+            }
+
+            return cartItems;
+        }
+
+        public string GetSlugBy(int id)
+        {
+            return _repository.GetSlugBy(id);
         }
     }
 }

@@ -9,6 +9,7 @@ namespace _0_Framework.Domain
         public const string SystemUser = "1";
         public const string Administator = "2";
         public const string WebsiteUser = "3";
+        public const string ColleagueUser = "4";
 
         public static string GetRoleBy(int id)
         {
@@ -16,10 +17,14 @@ namespace _0_Framework.Domain
             {
                 case 1:
                     return "کاربر سیستم";
-                case 3:
+                case 2:
                     return "مدیرسیستم";
-                default:
+                case 3:
                     return "کاربر سایت";
+                case 4:
+                    return "کاربر همکار";
+                default:
+                    return "نامشخص";
             }
         }
     }

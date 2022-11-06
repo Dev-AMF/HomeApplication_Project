@@ -17,6 +17,7 @@ namespace Query.Contracts.Product
         public string Slug { get; set; }
         public string Keywords { get; set; }
         public string MetaDescription { get; set; }
+        public double NumericPrice { get; set; }
         public string Price { get; set; }
         public string PriceWithDiscount { get; set; }
         public int DiscountRate { get; set; }

@@ -86,5 +86,12 @@ namespace _0_Framework.Application
                 ?.Value;
             return JsonConvert.DeserializeObject<List<int>>(permissions);
         }
+
+        public int CurrentAccountId()
+        {
+            return IsAuthenticated()
+                ? int.Parse(_contextAccessor.HttpContext.User.Claims.First(x => x.Type == "AccountId")?.Value)
+                : 0;
+        }
     }
 }

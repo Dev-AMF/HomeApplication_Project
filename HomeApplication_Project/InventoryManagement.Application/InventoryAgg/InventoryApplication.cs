@@ -10,10 +10,12 @@ namespace InventoryManagement.Application.InventoryAgg
     public class InventoryApplication : IInventoryApplication
     {
         private readonly IInventoryRepository _repository;
+        private readonly IAuthHelper _authHelper;
 
-        public InventoryApplication(IInventoryRepository repository)
+        public InventoryApplication(IInventoryRepository repository, IAuthHelper authHelper)
         {
             _repository = repository;
+            _authHelper = authHelper;
         }
 
         public OperationResult Create(CreateInventory command)
@@ -45,8 +47,8 @@ namespace InventoryManagement.Application.InventoryAgg
             if (inventory == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            
-            inventory.Decrease(command.Count, 1, command.Description, 0);
+            var operatorId = _authHelper.CurrentAccountId();
+            inventory.Decrease(command.Count, operatorId, command.Description, 0);
             
             _repository.Save();
             return operation.Succeded();
@@ -56,7 +58,8 @@ namespace InventoryManagement.Application.InventoryAgg
         {
 
             var operation = new OperationResult();
-            const int operatorId = 1;
+            var operatorId = _authHelper.CurrentAccountId();
+
 
             foreach (var item in command)
             {

@@ -1,0 +1,264 @@
+﻿OnGetPay()
+{
+//var paymentResponse = _zarinPalFactory.CreatePaymentRequest(cart.PayAmount.ToString(CultureInfo.InvariantCulture),"","",
+            //                                                                        "خرید از درگاه لوازم خانگی و دکوری", orderId);
+            //return Redirect(
+            //        $"https://{_zarinPalFactory.Prefix}.zarinpal.com/pg/StartPay/{paymentResponse.Authority}");
+
+
+            var siteUrl = _configuration.GetSection("payment")["siteUrl"];
+            var CallbackURL = $"{siteUrl}/Checkout?handler=CallBack&oId={orderId}";
+
+            var payresult = _onlinePayment.Request(invoice =>
+                               invoice
+                               .UseAutoRandomTrackingNumber()
+                               .SetCallbackUrl(CallbackURL)
+                               .SetAmount((Money)cart.PayAmount)
+                               .SetGateway("ParbadVirtualGateway")
+                               .UseParbadVirtual()
+            );
+
+               GatewayTrackNo = payresult.TrackingNumber.ToString();
+
+                var url =  payresult.GatewayTransporter.TransportToGateway();
+            
+            return payresult.GatewayTransporter.TransportToGateway();
+}
+-------------------------------------------------------------------------------------
+public IActionResult OnGetCallBack([FromQuery] int oId, [FromQuery] string paymentToken)
+        {
+            var payresult = new PaymentResult();
+
+            var verificationResponse = _onlinePayment.Verify(long.Parse(GatewayTrackNo));
+            
+            var RefId = verificationResponse.TrackingNumber;
+            var TrackingNo = verificationResponse.TransactionCode;
+
+            if (verificationResponse.IsSucceed)
+            {
+                var issueTrackingNo = _orderApp.PaymentSucceeded(oId, RefId , TrackingNo);
+                
+                Response.Cookies.Delete("cart-items");
+                payresult = payresult.Succeeded(ApplicationMessages.SuccessfulPayment, issueTrackingNo);
+                
+                return RedirectToPage("/PaymentResult", payresult);
+            }
+            else
+            {
+                Response.Cookies.Delete("cart-items");
+
+                payresult = payresult.Failed(ApplicationMessages.UnSuccessfulPayment);
+                return RedirectToPage("/PaymentResult", payresult);
+            }
+        }
+---------------------------------------------------------------------------------------------------
+public async Task<IActionResult> OnPostPayAsync()
+        {
+            var cart = _cartService.Get();
+            var result = _productQuery.CheckInventoryStatus(cart.Items);
+
+            if (result.Any(CI => CI.IsInStock) == false)
+                return RedirectToPage("/Cart");
+
+            var orderId = _orderApp.PlaceOrder(cart);
+
+
+            Message = null;
+            PayAmount = cart.PayAmount.ToString(CultureInfo.InvariantCulture);
+
+            var Callback = System.Web.HttpUtility.UrlEncode(Url.Page("./Checkout", "Callback", null, Request.Scheme, Request.Host.Value));
+
+            var client = httpClientFactory.CreateClient();
+            var response = await client.PostAsJsonAsync("https://panel.aqayepardakht.ir/api/v2/create", new
+            {
+                pin = "sandbox",
+                amount = cart.PayAmount,
+                callback = Callback,
+                invoice_id = orderId,
+                description = ApplicationMessages.GatewayDescription,
+            });
+
+            var payResult = await response.Content.ReadFromJsonAsync<TokenResponse>();
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return Redirect($"https://panel.aqayepardakht.ir/startpay/sandbox/{payResult?.TransactionId}");
+            }
+
+            var paymentResult = new PaymentResult();
+            var message = GatewayCodes.TranslateCode(payResult?.ErrorCode);
+
+            return RedirectToPage("/PaymentResult", paymentResult.Failed(message));
+        }
+
+        public async Task<IActionResult> OnPostCallBackAsync()
+        {
+            //string? transid, string? tracking_number , string? invoice_id
+
+            string tracking_number ="";
+            string transid ="", invoice_id ="";
+
+
+            var payresult = new PaymentResult();
+
+            Message = null;
+
+            if (string.IsNullOrEmpty(tracking_number))
+            {
+                Message = "پرداخت ناموفق بوده است";
+
+                Response.Cookies.Delete("cart-items");
+
+                payresult = payresult.Failed(ApplicationMessages.UnSuccessfulPayment);
+                return RedirectToPage("/PaymentResult", payresult);
+            }
+
+            var client = httpClientFactory.CreateClient();
+            var response = await client.PostAsJsonAsync("https://panel.aqayepardakht.ir/api/v2/verify", new
+            {
+                pin = "sandbox",
+                amount = double.Parse(PayAmount),
+                transid,
+            });
+
+            var result = await response.Content.ReadFromJsonAsync<TokenResponse>();
+            
+            var RefId = long.Parse(transid);
+            var TrackingNo = tracking_number;
+            var OId = int.Parse(invoice_id);
+
+            GatewayCodes.TranslateCode(result?.ErrorCode);            
+           
+
+            if (result.Status == "1")
+            {
+                var issueTrackingNo = _orderApp.PaymentSucceeded(OId, RefId , TrackingNo);
+                
+                Response.Cookies.Delete("cart-items");
+                payresult = payresult.Succeeded(ApplicationMessages.SuccessfulPayment, issueTrackingNo);
+                
+                return RedirectToPage("/PaymentResult", payresult);
+            }
+            else
+            {
+                Response.Cookies.Delete("cart-items");
+
+                payresult = payresult.Failed(ApplicationMessages.UnSuccessfulPayment);
+                return RedirectToPage("/PaymentResult", payresult);
+            }
+        }
+----------------------------------------------------------------------------------------
+--Parbad Async
+
+public async Task<IActionResult> OnPostPay()
+        {
+            var cart = _cartService.Get();
+            var result = _productQuery.CheckInventoryStatus(cart.Items);
+
+            if (result.Any(CI => CI.IsInStock) == false)
+                return RedirectToPage("/Cart");
+
+            var orderId = _orderApp.PlaceOrder(cart);
+
+            OrderId = orderId.ToString();
+            
+            var CallbackURL = Url.Page("./Checkout", "Callback", null, Request.Scheme, Request.Host.Value);
+
+
+            var payresult = await
+                _onlinePayment.RequestAsync(invoice =>
+                               invoice
+                               .UseAutoRandomTrackingNumber()
+                               .SetCallbackUrl(CallbackURL)
+                               .SetAmount((Money)cart.PayAmount)
+                               .SetGateway("ParbadVirtualGateway")
+                               .UseParbadVirtual()
+            );
+
+            GatewayTrackNo = payresult.TrackingNumber.ToString();
+
+            var url = payresult.GatewayTransporter.TransportToGateway();
+
+            return payresult.GatewayTransporter.TransportToGateway();
+        }
+
+        public async Task<IActionResult> OnGetCallBack()
+        {
+            var payresult = new PaymentResult();
+            
+            var invoice = await _onlinePayment.FetchAsync();
+
+            // Check if the invoice is new or it's already processed before.
+            if (invoice.Status != PaymentFetchResultStatus.ReadyForVerifying)
+            {
+                // You can also see if the invoice is already verified before.
+                var isAlreadyVerified = invoice.IsAlreadyVerified;
+                Response.Cookies.Delete("cart-items");
+
+                payresult = payresult.Failed(ApplicationMessages.UnSuccessfulPayment);
+                return RedirectToPage("/PaymentResult", payresult);
+            }
+
+
+            var verificationResponse = await _onlinePayment.VerifyAsync(long.Parse(GatewayTrackNo));
+
+            var RefId = verificationResponse.TrackingNumber;
+            var TrackingNo = verificationResponse.TransactionCode;
+            var oId = int.Parse(OrderId);
+
+            if (verificationResponse.IsSucceed)
+            {
+                var issueTrackingNo = _orderApp.PaymentSucceeded(oId, RefId, TrackingNo);
+
+                Response.Cookies.Delete("cart-items");
+                payresult = payresult.Succeeded(ApplicationMessages.SuccessfulPayment, issueTrackingNo);
+
+                return RedirectToPage("/PaymentResult", payresult);
+            }
+            else
+            {
+                Response.Cookies.Delete("cart-items");
+
+                payresult = payresult.Failed(ApplicationMessages.UnSuccessfulPayment);
+                return RedirectToPage("/PaymentResult", payresult);
+            }
+        }
+        public async Task<IActionResult> OnPostCallBack()
+        {
+            var payresult = new PaymentResult();
+
+            var invoice = await _onlinePayment.FetchAsync();
+
+            // Check if the invoice is new or it's already processed before.
+            if (invoice.Status != PaymentFetchResultStatus.ReadyForVerifying)
+            {
+                // You can also see if the invoice is already verified before.
+                var isAlreadyVerified = invoice.IsAlreadyVerified;
+                Response.Cookies.Delete("cart-items");
+
+                payresult = payresult.Failed(ApplicationMessages.UnSuccessfulPayment);
+                return RedirectToPage("/PaymentResult", payresult);
+            }
+
+            var verificationResponse = await _onlinePayment.VerifyAsync(long.Parse(GatewayTrackNo));
+
+            var RefId = verificationResponse.TrackingNumber;
+            var TrackingNo = verificationResponse.TransactionCode;
+            var oId = int.Parse(OrderId);
+
+            if (verificationResponse.IsSucceed)
+            {
+                var issueTrackingNo = _orderApp.PaymentSucceeded(oId, RefId, TrackingNo);
+
+                Response.Cookies.Delete("cart-items");
+                payresult = payresult.Succeeded(ApplicationMessages.SuccessfulPayment, issueTrackingNo);
+
+                return RedirectToPage("/PaymentResult", payresult);
+            }
+            else
+            {
+                Response.Cookies.Delete("cart-items");
+
+                payresult = payresult.Failed(ApplicationMessages.UnSuccessfulPayment);
+                return RedirectToPage("/PaymentResult", payresult);
+            }
+        }

@@ -5,6 +5,7 @@ using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using System.Threading.Tasks;
 using _0_Framework.Application;
+using _0_Framework.Application.ZarinPal;
 using _0_Framework.Domain;
 using Account.Management.Infrastructure.EFCore;
 using BlogManagement.Infrastructure.Config;
@@ -19,6 +20,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Parbad.Builder;
+using Parbad.Gateway.Mellat;
+using Parbad.Gateway.ParbadVirtual;
 using ServiceHost.Helpers;
 using ServiceHost.PageFilters;
 using ShopManagement.Config;
@@ -51,11 +55,12 @@ namespace ServiceHost
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddTransient<IAuthHelper, AuthHelper>();
+            services.AddTransient<IZarinPalFactory, ZarinPalFactory>();
 
             //services.Configure<CookiePolicyOptions>(options =>
             //{
             //    options.CheckConsentNeeded = context => true;
-            //    //options.MinimumSameSitePolicy = SameSiteMode.Strict;
+            //    options.MinimumSameSitePolicy = SameSiteMode.Unspecified;
             //});
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -92,6 +97,33 @@ namespace ServiceHost
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Accounts", "Account");
                 })
             ;
+
+            services.AddParbad()
+                .ConfigureGateways(gateways =>
+                {
+                    gateways
+                         .AddMellat()
+                         .WithAccounts(source =>
+                         {
+                             source.AddInMemory(account =>
+                             {
+                                 account.TerminalId = 123;
+                                 account.UserName = "MyId";
+                                 account.UserPassword = "MyPassword";
+                             });
+                         });
+
+                    gateways.AddParbadVirtual()
+                            .WithOptions(options => options.GatewayPath = "/MyvirtualGateway");
+
+                })
+                .ConfigureHttpContext(builder => builder.UseDefaultAspNetCore())
+                .ConfigureStorage(builder => builder.UseMemoryCache())
+                .ConfigureAutoRandomTrackingNumber(options =>
+                 {
+                     options.MinimumValue = 1000;
+                 });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -119,6 +151,8 @@ namespace ServiceHost
             app.UseRouting();
 
             app.UseAuthorization();
+            
+            app.UseParbadVirtualGateway();
 
             app.UseEndpoints(endpoints =>
             {

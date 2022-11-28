@@ -19,7 +19,7 @@ namespace ServiceHost.Pages
 
         public CartModel(IProductQuery productQuery)
         {
-            CartItems = new List<CartItem>();
+             CartItems ??= new List<CartItem>();
             _productQuery = productQuery;
         }
 

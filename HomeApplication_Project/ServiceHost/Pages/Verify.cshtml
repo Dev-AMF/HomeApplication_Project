@@ -1,0 +1,40 @@
+﻿@page
+@model ServiceHost.Pages.VerifyModel
+@{
+    ViewData["Title"] = "Verify result";
+}
+
+<table class="table">
+    <tr>
+        <td>Tracking number</td>
+        <td>@Model.VerifyResult.TrackingNumber</td>
+    </tr>
+    <tr>
+        <td>Amount</td>
+        <td>@Model.VerifyResult.Amount</td>
+    </tr>
+    <tr>
+        <td>Gateway</td>
+        <td>@Model.VerifyResult.GatewayName</td>
+    </tr>
+    <tr>
+        <td>Gateway account name</td>
+        <td>@Model.VerifyResult.GatewayAccountName</td>
+    </tr>
+    <tr>
+        <td>Transaction code</td>
+        <td>@Model.VerifyResult.TransactionCode</td>
+    </tr>
+    <tr>
+        <td>Is succeed</td>
+        <td>@Model.VerifyResult.IsSucceed</td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td>@Model.VerifyResult.Status</td>
+    </tr>
+    <tr>
+        <td>Message</td>
+        <td class="text-lg">@Model.VerifyResult.Message</td>
+    </tr>
+</table>

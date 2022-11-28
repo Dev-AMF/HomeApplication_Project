@@ -87,6 +87,11 @@ namespace AccountManagement.Application
             return operation.Succeded();
         }
 
+        public List<AccountViewModel> GetAccounts()
+        {
+            return _accountRepository.GetAccounts();
+        }
+
         public EditAccount GetDetails(int id)
         {
             return _accountRepository.GetDetails(id);

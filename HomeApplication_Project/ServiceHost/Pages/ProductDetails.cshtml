@@ -126,15 +126,15 @@
                                             </span>
 
                                             <span class="review-count">
-                                                <a href="#">(2 reviews)</a> | <a href="#">نظر دهید</a>
+                                                <a href="#review-tab">(@Model.Product.Comments.Count)</a> | <a href="#review-tab">نظر دهید</a>
                                             </span>
                                         </div>
 
                                         <p class="single-grid-product__price" style="direction: rtl">
                                             @if (Model.Product.HasDiscount)
                                             {
-                                                <span class="discounted-price">@Model.Product.Price تومان</span>
-                                                <span class="main-price discounted">@Model.Product.PriceWithDiscount تومان</span>
+                                                <span class="discounted-price">@Model.Product.PriceWithDiscount تومان</span>
+                                                <span class="main-price discounted">@Model.Product.Price تومان</span>
                                             }
                                             else
                                             {
@@ -218,7 +218,7 @@
                                                 <a class="nav-item nav-link active" id="description-tab"
                                                    data-toggle="tab" href="#product-description" role="tab"
                                                    aria-selected="true">توضیحات</a>
-                                                <a class="nav-item nav-link" id="review-tab" data-toggle="tab"
+                                                <a class="nav-item nav-link" id="review-tab2" data-toggle="tab"
                                                    href="#review" role="tab" aria-selected="false">نظرات (@Model.Product.Comments.Count)</a>
                                             </div>
                                         </nav>
@@ -293,7 +293,7 @@
                                                             </div>
                                                         </div>
                                                     }
-                                                    <div class="rating-form-wrapper fix">
+                                                    <div class="rating-form-wrapper fix" >
                                                         <h3>نظر خود را به ما بگویید</h3>
                                                         <form method="post">
                                                             <div class="rating-form row">

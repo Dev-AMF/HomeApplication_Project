@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "B1iUIuB3XBV3SFcy/Fzy5UCS0f5N9o2hintg/GL0+AepgHdLfAtqycbcYu8mNCu8c6TuDfUS0X3uMf0/vYEweg==",
+  "dgSpecHash": "U7VJAP/vcoZRAofjKYFZ+TucdhK+iVedooZzuAJwgVOxXC1Vk9rjARN9m/zhm+ll2cHPw6BMjnoDZHFXL+sN8A==",
   "success": true,
   "projectFilePath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\DiscountManagement.Infrastructure.Config\\DiscountManagement.Infrastructure.Config.csproj",
   "expectedPackageFiles": [
@@ -55,6 +55,7 @@
     "C:\\Users\\User-1\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\User-1\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\User-1\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\User-1\\.nuget\\packages\\restsharp\\106.11.4\\restsharp.106.11.4.nupkg.sha512",
     "C:\\Users\\User-1\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\User-1\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\User-1\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

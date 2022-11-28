@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ShopManagement.Domain.OrderAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureSliderAgg;
@@ -23,8 +24,11 @@ namespace ShopManagement.Infrastructure.EFCore
         
         public DbSet<ProductPictureSlider> ProductsPicturesSliders { get; set; }
         public DbSet<Slide> Sliders { get; set; }
-        
 
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<PaymentMethod> PaymentMethods { get; set; }
+        
         public At_HomeApplicationContext(DbContextOptions<At_HomeApplicationContext> options) : base(options)
         {
                 

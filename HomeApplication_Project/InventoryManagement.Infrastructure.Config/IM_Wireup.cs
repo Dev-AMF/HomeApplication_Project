@@ -7,6 +7,8 @@ using InventoryManagement.Infrastructure.EFCore;
 using InventoryManagement.Infrastructure.EFCore.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Query.Contracts.Inventory;
+using Query.Queries;
 using System;
 
 namespace InventoryManagement.Infrastructure.Config
@@ -17,6 +19,8 @@ namespace InventoryManagement.Infrastructure.Config
         {
             services.AddTransient<IInventoryApplication, InventoryApplication>();
             services.AddTransient<IInventoryRepository, InventoryRepository>();
+
+            services.AddTransient<IInventoryQuery, InventoryQuery>();
 
             services.AddTransient<IPermissionExposer, InventoryPermissionExposer>();
 

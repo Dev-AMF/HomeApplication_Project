@@ -9,9 +9,11 @@ using _0_Framework.Application.ZarinPal;
 using _0_Framework.Domain;
 using Account.Management.Infrastructure.EFCore;
 using BlogManagement.Infrastructure.Config;
+using BlogManagement.Presentation.Api;
 using CommentManagement.Infrastructure.Config;
 using DiscountManagement.Infrastructure.Config;
 using InventoryManagement.Infrastructure.Config;
+using InventoryManagement.Presentation.Api;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,6 +28,7 @@ using Parbad.Gateway.ParbadVirtual;
 using ServiceHost.Helpers;
 using ServiceHost.PageFilters;
 using ShopManagement.Config;
+using ShopManagement.Presentation.Api;
 
 namespace ServiceHost
 {
@@ -96,6 +99,10 @@ namespace ServiceHost
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Discounts", "Discount");
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Accounts", "Account");
                 })
+                .AddApplicationPart(typeof(ProductController).Assembly)
+                .AddApplicationPart(typeof(InventoryController).Assembly)
+                .AddApplicationPart(typeof(ArticleController).Assembly)
+                .AddNewtonsoftJson()
             ;
 
             services.AddParbad()
@@ -157,7 +164,8 @@ namespace ServiceHost
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllers();
+                //endpoints.MapDefaultControllerRoute();
             });
         }
     }

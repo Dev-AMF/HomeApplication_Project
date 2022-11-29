@@ -14,14 +14,18 @@
     <ProjectReference Include="..\AccountManagement.Infrastructure.Config\AccountManagement.Infrastructure.Config.csproj" />
     <ProjectReference Include="..\AccountMangement.Infrastructure.EFCore\AccountMangement.Infrastructure.EFCore.csproj" />
     <ProjectReference Include="..\BlogManagement.Infrastructure.Config\BlogManagement.Infrastructure.Config.csproj" />
+    <ProjectReference Include="..\BlogManagement.Presentation.Api\BlogManagement.Presentation.Api.csproj" />
     <ProjectReference Include="..\CommentManagement.Infrastructure.Config\CommentManagement.Infrastructure.Config.csproj" />
     <ProjectReference Include="..\DiscountManagement.Infrastructure.Config\DiscountManagement.Infrastructure.Config.csproj" />
     <ProjectReference Include="..\InventoryManagement.Infrastructure.Config\InventoryManagement.Infrastructure.Config.csproj" />
+    <ProjectReference Include="..\InventoryManagement.Presentation.Api\InventoryManagement.Presentation.Api.csproj" />
     <ProjectReference Include="..\ShopManagement.Config\ShopManagement.Config.csproj" />
+    <ProjectReference Include="..\ShopManagement.Presentation.Api\ShopManagement.Presentation.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.31" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.9">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -32,6 +36,10 @@
     <PackageReference Include="Parbad.AspNetCore" Version="1.2.0" />
     <PackageReference Include="Parbad.Storage.Cache" Version="1.2.0" />
     <PackageReference Include="System.Net.Http.Json" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

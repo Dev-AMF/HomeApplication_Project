@@ -21,6 +21,7 @@ using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureSliderAgg;
 using ShopManagement.Domain.Services;
 using ShopManagement.Domain.SlideAgg;
+using ShopManagement.Infrastructure.AccountACL;
 using ShopManagement.Infrastructure.EFCore;
 using ShopManagement.Infrastructure.EFCore.Repository;
 using ShopManagement.Infrastructure.InventoryACL;
@@ -60,6 +61,7 @@ namespace ShopManagement.Config
 
             
             services.AddTransient<IShopInventoryACL, ShopInventoryACL>();
+            services.AddTransient<IShopAccountAcl, ShopAccountACL>();
 
             services.AddTransient<IPermissionExposer, ShopPermissionExposer>();
 

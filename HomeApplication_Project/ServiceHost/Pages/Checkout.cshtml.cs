@@ -126,8 +126,7 @@ namespace ServiceHost.Pages
         }
 
 
-        public IActionResult OnGetCallBack([FromQuery] string authority, [FromQuery] string status,
-            [FromQuery] int oId)
+        public IActionResult OnGetCallBack([FromQuery] int oId, [FromQuery] string authority, [FromQuery] string status)
         {
             var orderAmount = _orderApp.GetAmountBy(oId);
             var verificationResponse =

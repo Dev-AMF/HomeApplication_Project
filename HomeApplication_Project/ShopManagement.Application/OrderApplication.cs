@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using _0_Framework.Application.Sms;
 using Microsoft.Extensions.Configuration;
 using ShopManagement.Application.Contracts.Order;
 using ShopManagement.Domain.OrderAgg;
@@ -12,17 +13,21 @@ namespace ShopManagement.Application
     public class OrderApplication : IOrderApplication
     {
         private readonly IAuthHelper _authHelper;
+        private readonly IRestSmsService _smsService;
         private readonly IConfiguration _configuration;
+        private readonly IShopAccountAcl _shopAccountACL;
         private readonly IOrderRepository _orderRepository;
         private readonly IShopInventoryACL _shopInventoryACL;
 
         public OrderApplication(IAuthHelper authHelper, IOrderRepository orderRepository, IConfiguration configuration,
-            IShopInventoryACL shopInventoryACL)
+            IShopInventoryACL shopInventoryACL, IRestSmsService smsService, IShopAccountAcl shopAccountACL)
         {
             _authHelper = authHelper;
             _orderRepository = orderRepository;
             _configuration = configuration;
             _shopInventoryACL = shopInventoryACL;
+            _smsService = smsService;
+            _shopAccountACL = shopAccountACL;
         }
 
         public int PlaceOrder(Cart cart)
@@ -59,6 +64,14 @@ namespace ShopManagement.Application
             if (!_shopInventoryACL.ReduceFromInventory(order.Items)) return "";
 
             _orderRepository.Save();
+
+            var account = _shopAccountACL.GetAccountBy(order.AccountId);
+
+            //var SmsMessage = string.Format(ApplicationMessages.PurchaseSms, account.Fullname, order.IssueTrackingNo);
+            //var SmsResult = _smsService.Send(SmsMessage, account.MobileNo);
+
+            var SmsResult = _smsService.FastSend(account.Fullname, order.IssueTrackingNo, account.MobileNo);
+
 
             return order.IssueTrackingNo;
         }

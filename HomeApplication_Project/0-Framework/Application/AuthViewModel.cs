@@ -11,14 +11,16 @@ namespace _0_Framework.Application
         public string RoleName { get; set; }
         public string Fullname { get; set; }
         public string Username { get; set; }
+        public string MobileNo { get; set; }
         public List<int> Permissions { get; set; }
 
-        public AuthViewModel(int id, int roleId, string fullname, string username, List<int> permissions)
+        public AuthViewModel(int id, int roleId, string fullname, string username, string mobileNo, List<int> permissions)
         {
             Id = id;
             RoleId = roleId;
             Fullname = fullname;
             Username = username;
+            MobileNo = mobileNo;
             Permissions = permissions;
         }
         public AuthViewModel()

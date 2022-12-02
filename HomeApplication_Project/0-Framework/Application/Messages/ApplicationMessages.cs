@@ -16,5 +16,6 @@ namespace _0_Framework.Application
         public const string GatewayDescription = "خرید از درگاه لوازم خانگی و دکوری";
         public const string CashPayDescription = "سفارش شما با موفقیت ثبت شد. پس از تماس کارشناسان ما و پرداخت وجه، سفارش ارسال خواهد شد.\n شناسه پرداخت جهت پیگیری : {0}";
         public const string CustomerPurchase = "خرید مشتری";
+        public const string PurchaseSms = "{0} گرامی سفارش شما با شماره پیگیری {1} با موفقیت پرداخت شد و ارسال خواهد شد.";
     }
 }

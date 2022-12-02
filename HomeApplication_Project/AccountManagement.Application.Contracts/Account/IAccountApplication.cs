@@ -10,7 +10,8 @@ namespace AccountManagement.Application.Contracts.Account
         void Logout();
 
         EditAccount GetDetails(int id);
-        
+
+        AccountViewModel GetAccountBy(int id);
         OperationResult Create(CreateAccount command);
         OperationResult Register(CreateAccount command);
         OperationResult Edit(EditAccount command);

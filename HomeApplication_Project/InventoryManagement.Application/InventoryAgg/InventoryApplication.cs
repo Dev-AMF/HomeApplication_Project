@@ -114,8 +114,9 @@ namespace InventoryManagement.Application.InventoryAgg
             if (inventory == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            
-            inventory.Increase(command.Count, 1 , command.Description);
+            var operatorId = _authHelper.CurrentAccountId();
+
+            inventory.Increase(command.Count, operatorId, command.Description);
             
             _repository.Save();
             return operation.Succeded();

@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Json.Net/1.0.33": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Json.Net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Json.Net.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -752,6 +761,15 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "SmsIrRestful.netCore/1.1.5": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/IPE.SmsIrRestful.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/IPE.SmsIrRestful.dll": {}
         }
       },
       "System.Buffers/4.5.0": {
@@ -1823,11 +1841,13 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Json.Net": "1.0.33",
           "Microsoft.AspNetCore.Authentication.Cookies": "2.2.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
-          "RestSharp": "106.11.4"
+          "RestSharp": "106.11.4",
+          "SmsIrRestful.NetCore": "1.1.5"
         },
         "compile": {
           "bin/placeholder/0-Framework.dll": {}
@@ -1867,6 +1887,18 @@
     }
   },
   "libraries": {
+    "Json.Net/1.0.33": {
+      "sha512": "5tE+db6BqhRAvITIVBeRsQorLGshPExfm4FmMRvWWAfs4RxeTbFFj2PIEybwmMW0qR30HKkXDYhq0YkDK2Jtxw==",
+      "type": "package",
+      "path": "json.net/1.0.33",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "json.net.1.0.33.nupkg.sha512",
+        "json.net.nuspec",
+        "lib/netstandard2.0/Json.Net.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "sha512": "b0R9X7L6zMqNsssKDvhYHuNi5x0s4DyHTeXybIAyGaitKiW1Q5aAGKdV2codHPiePv9yHfC9hAMyScXQ/xXhPw==",
       "type": "package",
@@ -2903,6 +2935,18 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "SmsIrRestful.netCore/1.1.5": {
+      "sha512": "P355RG8zfZ39BRmk/Qk41XZxktF5mrZs406CODXljGwv+VvRCwIx2+6oXzFsSbC0kshYt4LNBvT6grZhjExXGg==",
+      "type": "package",
+      "path": "smsirrestful.netcore/1.1.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/IPE.SmsIrRestful.dll",
+        "smsirrestful.netcore.1.1.5.nupkg.sha512",
+        "smsirrestful.netcore.nuspec"
       ]
     },
     "System.Buffers/4.5.0": {

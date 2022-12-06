@@ -1940,21 +1940,25 @@ p.slider-title--small {
 }
 
 .hero-slider-content p.slider-title--small {
-	font-size: 14px;
+	font-size: 20px;
 	font-weight: 400;
 	line-height: 24px;
 	width: 550px;
 	max-width: 100%;
+	margin-top: 30px;
+	margin-right: 45px;
 	margin-bottom: 60px;
 	color: #292929;
+	direction: rtl;
 }
 
 .hero-slider-content p.slider-title--big-bold {
-	font-size: 80px;
+	font-size: 35px;
 	font-weight: 700;
 	line-height: 80px;
 	margin-bottom: 20px;
 	color: #292929;
+	direction : rtl;
 }
 
 .hero-slider-content p.slider-title--big-light {
@@ -6602,7 +6606,7 @@ h3.comment-counter {
 	}
 
 	.hero-slider-content p.slider-title--big-bold {
-		font-size: 50px;
+		font-size: 35px;
 		line-height: 50px;
 	}
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Application\\InventoryManagement.Application.csproj": {}
+    "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Application\\InventoryManagement.Application.csproj": {}
   },
   "projects": {
-    "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\0-Framework\\0-Framework.csproj": {
+    "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\0-Framework\\0-Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\0-Framework\\0-Framework.csproj",
+        "projectUniqueName": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\0-Framework\\0-Framework.csproj",
         "projectName": "0-Framework",
-        "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\0-Framework\\0-Framework.csproj",
+        "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\0-Framework\\0-Framework.csproj",
         "packagesPath": "C:\\Users\\User-1\\.nuget\\packages\\",
-        "outputPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\0-Framework\\obj\\",
+        "outputPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\0-Framework\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,10 +67,6 @@
             "RestSharp": {
               "target": "Package",
               "version": "[106.11.4, )"
-            },
-            "SmsIrRestful.NetCore": {
-              "target": "Package",
-              "version": "[1.1.5, )"
             }
           },
           "imports": [
@@ -92,14 +88,14 @@
         }
       }
     },
-    "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj": {
+    "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj",
+        "projectUniqueName": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj",
         "projectName": "InventoryManagement.Application.Contracts",
-        "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj",
+        "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj",
         "packagesPath": "C:\\Users\\User-1\\.nuget\\packages\\",
-        "outputPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\obj\\",
+        "outputPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -115,11 +111,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\0-Framework\\0-Framework.csproj": {
-                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\0-Framework\\0-Framework.csproj"
+              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\0-Framework\\0-Framework.csproj": {
+                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\0-Framework\\0-Framework.csproj"
               },
-              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
-                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj"
+              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
+                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj"
               }
             }
           }
@@ -151,14 +147,14 @@
         }
       }
     },
-    "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Application\\InventoryManagement.Application.csproj": {
+    "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Application\\InventoryManagement.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Application\\InventoryManagement.Application.csproj",
+        "projectUniqueName": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Application\\InventoryManagement.Application.csproj",
         "projectName": "InventoryManagement.Application",
-        "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Application\\InventoryManagement.Application.csproj",
+        "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Application\\InventoryManagement.Application.csproj",
         "packagesPath": "C:\\Users\\User-1\\.nuget\\packages\\",
-        "outputPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Application\\obj\\",
+        "outputPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -174,11 +170,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj": {
-                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj"
+              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj": {
+                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj"
               },
-              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj": {
-                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj"
+              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj": {
+                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj"
               }
             }
           }
@@ -210,14 +206,14 @@
         }
       }
     },
-    "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj": {
+    "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj",
+        "projectUniqueName": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj",
         "projectName": "InventoryManagement.Domain",
-        "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj",
+        "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj",
         "packagesPath": "C:\\Users\\User-1\\.nuget\\packages\\",
-        "outputPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Domain\\obj\\",
+        "outputPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -233,11 +229,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\0-Framework\\0-Framework.csproj": {
-                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\0-Framework\\0-Framework.csproj"
+              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\0-Framework\\0-Framework.csproj": {
+                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\0-Framework\\0-Framework.csproj"
               },
-              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj": {
-                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj"
+              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj": {
+                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\InventoryManagement.Application.Contracts\\InventoryManagement.Application.Contracts.csproj"
               }
             }
           }
@@ -269,14 +265,14 @@
         }
       }
     },
-    "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
+    "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj",
+        "projectUniqueName": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj",
         "projectName": "ShopManagement.Application.Contracts",
-        "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj",
+        "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj",
         "packagesPath": "C:\\Users\\User-1\\.nuget\\packages\\",
-        "outputPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Application.Contracts\\obj\\",
+        "outputPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Application.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -292,8 +288,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\0-Framework\\0-Framework.csproj": {
-                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\0-Framework\\0-Framework.csproj"
+              "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\0-Framework\\0-Framework.csproj": {
+                "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\0-Framework\\0-Framework.csproj"
               }
             }
           }

@@ -763,15 +763,6 @@
           }
         }
       },
-      "SmsIrRestful.netCore/1.1.5": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.1/IPE.SmsIrRestful.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/IPE.SmsIrRestful.dll": {}
-        }
-      },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -1846,8 +1837,7 @@
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
-          "RestSharp": "106.11.4",
-          "SmsIrRestful.NetCore": "1.1.5"
+          "RestSharp": "106.11.4"
         },
         "compile": {
           "bin/placeholder/0-Framework.dll": {}
@@ -3221,18 +3211,6 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "SmsIrRestful.netCore/1.1.5": {
-      "sha512": "P355RG8zfZ39BRmk/Qk41XZxktF5mrZs406CODXljGwv+VvRCwIx2+6oXzFsSbC0kshYt4LNBvT6grZhjExXGg==",
-      "type": "package",
-      "path": "smsirrestful.netcore/1.1.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netcoreapp3.1/IPE.SmsIrRestful.dll",
-        "smsirrestful.netcore.1.1.5.nupkg.sha512",
-        "smsirrestful.netcore.nuspec"
       ]
     },
     "System.Buffers/4.5.0": {
@@ -6935,11 +6913,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Config\\ShopManagement.Config.csproj",
+      "projectUniqueName": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Config\\ShopManagement.Config.csproj",
       "projectName": "ShopManagement.Config",
-      "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Config\\ShopManagement.Config.csproj",
+      "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Config\\ShopManagement.Config.csproj",
       "packagesPath": "C:\\Users\\User-1\\.nuget\\packages\\",
-      "outputPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Config\\obj\\",
+      "outputPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Config\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6955,20 +6933,20 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\Query\\Query.csproj": {
-              "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\Query\\Query.csproj"
+            "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\Query\\Query.csproj": {
+              "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\Query\\Query.csproj"
             },
-            "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Application\\ShopManagement.Application.csproj": {
-              "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Application\\ShopManagement.Application.csproj"
+            "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Application\\ShopManagement.Application.csproj": {
+              "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Application\\ShopManagement.Application.csproj"
             },
-            "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Infrastructure.AccountACL\\ShopManagement.Infrastructure.AccountACL.csproj": {
-              "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Infrastructure.AccountACL\\ShopManagement.Infrastructure.AccountACL.csproj"
+            "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Infrastructure.AccountACL\\ShopManagement.Infrastructure.AccountACL.csproj": {
+              "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Infrastructure.AccountACL\\ShopManagement.Infrastructure.AccountACL.csproj"
             },
-            "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Infrastructure.EFCore\\ShopManagement.Infrastructure.EFCore.csproj": {
-              "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Infrastructure.EFCore\\ShopManagement.Infrastructure.EFCore.csproj"
+            "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Infrastructure.EFCore\\ShopManagement.Infrastructure.EFCore.csproj": {
+              "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Infrastructure.EFCore\\ShopManagement.Infrastructure.EFCore.csproj"
             },
-            "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Infrastructure.InventoryACL\\ShopManagement.Infrastructure.InventoryACL.csproj": {
-              "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\ShopManagement.Infrastructure.InventoryACL\\ShopManagement.Infrastructure.InventoryACL.csproj"
+            "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Infrastructure.InventoryACL\\ShopManagement.Infrastructure.InventoryACL.csproj": {
+              "projectPath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\ShopManagement.Infrastructure.InventoryACL\\ShopManagement.Infrastructure.InventoryACL.csproj"
             }
           }
         }

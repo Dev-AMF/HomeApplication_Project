@@ -7,6 +7,8 @@ using AccountMangement.Infrastructure;
 using AccountMangement.Infrastructure.EFCore.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Query.Contracts.Accounts;
+using Query.Queries;
 using System;
 
 namespace Account.Management.Infrastructure.EFCore
@@ -21,6 +23,8 @@ namespace Account.Management.Infrastructure.EFCore
 
             services.AddTransient<IRoleApplication, RoleApplication>();
             services.AddTransient<IRoleRepository, RoleRepository>();
+
+            services.AddTransient<IAccountQuery, AccountQuery>();
 
             services.AddDbContext<At_HomeApplicationAccountContext>(
                 options =>

@@ -155,7 +155,7 @@
                                             }
                                         </p>
 
-                                        <p class="product-description">
+                                        <p class="product-description" style="direction: rtl">
                                             @Model.Product.ShortDescription
                                         </p>
                                         @if (Model.Product.HasDiscount)
@@ -218,7 +218,7 @@
                                                 <a class="nav-item nav-link active" id="description-tab"
                                                    data-toggle="tab" href="#product-description" role="tab"
                                                    aria-selected="true">توضیحات</a>
-                                                <a class="nav-item nav-link" id="review-tab2" data-toggle="tab"
+                                                <a class="nav-item nav-link" id="review-tab" data-toggle="tab"
                                                    href="#review" role="tab" aria-selected="false">نظرات (@Model.Product.Comments.Count)</a>
                                             </div>
                                         </nav>

@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Query.Contracts.CartServices;
 using Query.Contracts.Comment;
+using Query.Contracts.Orders;
 using Query.Contracts.Product;
 using Query.Contracts.ProductCategory;
 using Query.Contracts.ProductPictureSlider;
@@ -52,6 +53,7 @@ namespace ShopManagement.Config
             services.AddTransient<IProductQuery, ProductQuery>();
             services.AddTransient<IProductPictureSliderQuery, ProductPictureSliderQuery>();
 
+            services.AddTransient<IOrderQuery, OrderQuery>();
 
             services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddTransient<IOrderApplication, OrderApplication>();

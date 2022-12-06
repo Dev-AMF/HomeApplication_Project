@@ -122,7 +122,7 @@ function changeCartItemCount(id, totalId, count) {
 
 function PriceFormatter(price, totalId) {
 
-    debugger
+    //debugger
     var callsettings = {
         "url": "https://localhost:5001/api/Inventory/PriceFormatter/" + price,
         "method": "GET",

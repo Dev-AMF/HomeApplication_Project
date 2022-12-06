@@ -28,6 +28,7 @@ namespace Query.Queries
                                ProductId = PPS.ProductId
 
                            })
+                           .Where(PPS => PPS.ProductId == id)
                            .Where(PPS => PPS.IsRemoved == false)
                            .ToList();
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y/d431gqskRRvbLP5J5sAV8vyMwRyotVaNaDKKpy+cNyG0ezv3An88fh75FJgyjN0Jt8D1YEKMczMei1RKTWOQ==",
+  "dgSpecHash": "LkRDvzUCXnv7uRgp1mjW6caht9SuZJPfBQJ2A4QbeIGhRK1OpCy9oJMFKllwbGb96r6Lh/JuuDHWvW37HyfEMg==",
   "success": true,
-  "projectFilePath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\S10~\\HomeApplication_Project\\DiscountManagement.Application\\DiscountManagement.Application.csproj",
+  "projectFilePath": "K:\\PrgrammingSources\\A\\Atriya(Asp.Net)\\Home-Application[GithubClone]\\HomeApplication_Project\\DiscountManagement.Application\\DiscountManagement.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User-1\\.nuget\\packages\\json.net\\1.0.33\\json.net.1.0.33.nupkg.sha512",
     "C:\\Users\\User-1\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
@@ -62,7 +62,6 @@
     "C:\\Users\\User-1\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\User-1\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\User-1\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\User-1\\.nuget\\packages\\smsirrestful.netcore\\1.1.5\\smsirrestful.netcore.1.1.5.nupkg.sha512",
     "C:\\Users\\User-1\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\User-1\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\User-1\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

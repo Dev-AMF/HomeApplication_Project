@@ -87,7 +87,6 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\InventoryManagement.Domain.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contracts.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\ShopManagement.Domain.pdb
-K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\Query\obj\Debug\netcoreapp3.1\Query.csprojAssemblyReference.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\Query\obj\Debug\netcoreapp3.1\Query.AssemblyInfoInputs.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\Query\obj\Debug\netcoreapp3.1\Query.AssemblyInfo.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\Query\obj\Debug\netcoreapp3.1\Query.csproj.CoreCompileInputs.cache
@@ -100,3 +99,4 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\Query.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\Query\bin\Debug\netcoreapp3.1\Query.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\Query\obj\Debug\netcoreapp3.1\Query.genruntimeconfig.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\Query\obj\Debug\netcoreapp3.1\Query.csprojAssemblyReference.cache

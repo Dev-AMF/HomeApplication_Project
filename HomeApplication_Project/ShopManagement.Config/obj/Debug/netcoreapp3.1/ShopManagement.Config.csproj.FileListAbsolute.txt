@@ -100,7 +100,6 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Config\bin\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.EFCore.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Config\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contracts.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Config\bin\Debug\netcoreapp3.1\ShopManagement.Domain.pdb
-K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Config\obj\Debug\netcoreapp3.1\ShopManagement.Config.csprojAssemblyReference.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Config\obj\Debug\netcoreapp3.1\ShopManagement.Config.AssemblyInfoInputs.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Config\obj\Debug\netcoreapp3.1\ShopManagement.Config.AssemblyInfo.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Config\obj\Debug\netcoreapp3.1\ShopManagement.Config.csproj.CoreCompileInputs.cache
@@ -110,3 +109,4 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Config\bin\Debug\netcoreapp3.1\ShopManagement.Config.deps.json
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Config\bin\Debug\netcoreapp3.1\ShopManagement.Config.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Config\bin\Debug\netcoreapp3.1\ShopManagement.Config.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Config\obj\Debug\netcoreapp3.1\ShopManagement.Config.csprojAssemblyReference.cache

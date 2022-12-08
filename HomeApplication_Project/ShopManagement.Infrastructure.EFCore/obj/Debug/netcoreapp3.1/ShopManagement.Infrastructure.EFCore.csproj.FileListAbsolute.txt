@@ -35,7 +35,6 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\AccountManagement.Application.Contracts.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\AccountManagement.Domain.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contracts.pdb
-K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.csprojAssemblyReference.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.AssemblyInfoInputs.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.AssemblyInfo.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.csproj.CoreCompileInputs.cache
@@ -48,3 +47,4 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.genruntimeconfig.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ShopManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.csprojAssemblyReference.cache

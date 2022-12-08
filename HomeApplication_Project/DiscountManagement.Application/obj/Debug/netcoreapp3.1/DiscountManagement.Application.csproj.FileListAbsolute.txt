@@ -32,7 +32,6 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Application\bin\Debug\netcoreapp3.1\AccountManagement.Application.Contracts.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contracts.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Domain.pdb
-K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.csprojAssemblyReference.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.AssemblyInfoInputs.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.AssemblyInfo.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.csproj.CoreCompileInputs.cache
@@ -42,3 +41,4 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Application\bin\Debug\netcoreapp3.1\DiscountManagement.Application.deps.json
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Application\bin\Debug\netcoreapp3.1\DiscountManagement.Application.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Application\bin\Debug\netcoreapp3.1\DiscountManagement.Application.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.csprojAssemblyReference.cache

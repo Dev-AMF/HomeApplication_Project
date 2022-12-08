@@ -512,7 +512,6 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\ShopManagement.Infrastructure.AccountACL.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\ShopManagement.Infrastructure.InventoryACL.pdb
-K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.csprojAssemblyReference.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.AssemblyInfoInputs.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.AssemblyInfo.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.csproj.CoreCompileInputs.cache
@@ -601,7 +600,6 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\appsettings.Development.json
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\appsettings.json
-K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\ServiceHost.exe
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\ServiceHost.deps.json
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\ServiceHost.runtimeconfig.json
@@ -612,5 +610,7 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\ServiceHost.Views.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.csproj.CopyComplete
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\staticwebassets\ServiceHost.StaticWebAssets.Manifest.cache
-K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\staticwebassets\ServiceHost.StaticWebAssets.xml
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.genruntimeconfig.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.csprojAssemblyReference.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\staticwebassets\ServiceHost.StaticWebAssets.xml

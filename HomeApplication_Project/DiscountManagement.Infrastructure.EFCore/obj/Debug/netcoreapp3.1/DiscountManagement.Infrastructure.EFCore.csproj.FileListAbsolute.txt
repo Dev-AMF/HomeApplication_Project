@@ -47,7 +47,6 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contracts.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contracts.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\ShopManagement.Domain.pdb
-K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.csprojAssemblyReference.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.AssemblyInfoInputs.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.AssemblyInfo.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.csproj.CoreCompileInputs.cache
@@ -60,3 +59,4 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.genruntimeconfig.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\DiscountManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.csprojAssemblyReference.cache

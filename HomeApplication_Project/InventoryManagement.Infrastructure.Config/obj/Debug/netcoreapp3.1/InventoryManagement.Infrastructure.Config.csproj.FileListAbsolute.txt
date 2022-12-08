@@ -92,7 +92,6 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\InventoryManagement.Infrastructure.Config\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contracts.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\InventoryManagement.Infrastructure.Config\bin\Debug\netcoreapp3.1\ShopManagement.Domain.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\InventoryManagement.Infrastructure.Config\bin\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.pdb
-K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\InventoryManagement.Infrastructure.Config\obj\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.Config.csprojAssemblyReference.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\InventoryManagement.Infrastructure.Config\obj\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.Config.AssemblyInfoInputs.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\InventoryManagement.Infrastructure.Config\obj\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.Config.AssemblyInfo.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\InventoryManagement.Infrastructure.Config\obj\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.Config.csproj.CoreCompileInputs.cache
@@ -102,3 +101,4 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\InventoryManagement.Infrastructure.Config\bin\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.Config.deps.json
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\InventoryManagement.Infrastructure.Config\bin\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.Config.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\InventoryManagement.Infrastructure.Config\bin\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.Config.pdb
+K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\InventoryManagement.Infrastructure.Config\obj\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.Config.csprojAssemblyReference.cache

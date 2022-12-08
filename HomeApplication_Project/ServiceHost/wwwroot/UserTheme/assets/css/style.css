@@ -1819,11 +1819,14 @@ select {
 .hero-slider-wrapper .slick-arrow {
 	line-height: 54px;
 	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	z-index: 9;
 	top: 50%;
 	visibility: hidden;
-	width: 60px;
-	height: 60px;
+	width: 45px;
+	height: 45px;
 	transform: translateY(-50%);
 	text-align: center;
 	opacity: 0;
@@ -1946,7 +1949,7 @@ p.slider-title--small {
 	width: 550px;
 	max-width: 100%;
 	margin-top: 30px;
-	margin-right: 45px;
+	margin-right: 55px;
 	margin-bottom: 60px;
 	color: #292929;
 	direction: rtl;
@@ -2820,6 +2823,20 @@ p.slider-title--small {
 	border: 2px solid #ebebeb;
 }
 
+	.newsletter-form button {
+		font-weight: 600;
+		line-height: 28px;
+		/* position: absolute; */
+		/* top: 50%; */
+		/* right: 0; */
+		width: 200px;
+		/* transform: translateY(-50%); */
+		color: #292929;
+		border: none;
+		background: none;
+		border-right: 2px solid #ebebeb;
+	}
+
 	.newsletter-form input {
 		font-size: 12px;
 		line-height: 30px;
@@ -2829,20 +2846,6 @@ p.slider-title--small {
 		padding-right: 210px;
 		color: #9d9d9d;
 		border: none;
-	}
-
-	.newsletter-form button {
-		font-weight: 600;
-		line-height: 28px;
-		position: absolute;
-		top: 50%;
-		right: 0;
-		width: 200px;
-		transform: translateY(-50%);
-		color: #292929;
-		border: none;
-		border-left: 2px solid #ebebeb;
-		background: none;
 	}
 
 		.newsletter-form button:hover {
@@ -6959,7 +6962,7 @@ h3.comment-counter {
 		}
 
 	.hero-slider-content p.slider-title--big-bold {
-		font-size: 60px;
+		font-size: 35px;
 		line-height: 60px;
 	}
 
@@ -7164,12 +7167,14 @@ h3.comment-counter {
 		}
 
 	.hero-slider-content p.slider-title--big-bold {
-		font-size: 60px;
+		font-size: 25px;
 		line-height: 60px;
+		margin-top : 10px;
+	
 	}
 
 	.hero-slider-content p.slider-title--big-light {
-		font-size: 30px;
+		font-size: 25px;
 		line-height: 30px;
 	}
 

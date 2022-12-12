@@ -52,12 +52,6 @@ body {
     margin-right: 10px;
 }
 
-.header-cart-icon .counter {
-    left: 0;
-    right: 94%;
-    top: auto;
-}
-
 .header-icon-wrapper > ul > li {
     margin-left: unset;
     margin-right: 30px;
@@ -212,4 +206,30 @@ body {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+}
+
+@keyframes anifery {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.stickySet {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation-name: anifery;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.stickyremove {
+    background-color: white;
 }

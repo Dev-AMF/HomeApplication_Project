@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Query.Queries
 {
@@ -100,6 +101,36 @@ namespace Query.Queries
                     ShortDescription = AC.ShortDescription,
 
                 }).ToList();
+        }
+
+        public List<ArticleQueryModel> Search(string value)
+        {
+
+            if (string.IsNullOrWhiteSpace(value))
+                return new List<ArticleQueryModel>();
+
+            var Aqm = _context.Articles
+                //.Include(AC => AC.Category)
+                .Select(AC => new ArticleQueryModel
+                {
+                    Title = AC.Title,
+                    Slug = AC.Slug,
+                    Picture = AC.Picture,
+                    PictureAlt = AC.PictureAlt,
+                    PictureTitle = AC.PictureTitle,
+                    PublishDate = AC.PublishDate.ToFarsi(),
+                    ShortDescription = AC.ShortDescription,
+
+                });
+                
+            
+            Aqm = Aqm.Where(Aqm => Aqm.Title.Contains(value) || Aqm.ShortDescription.Contains(value)); 
+
+
+
+            //var ListedAqm = Aqm.OrderByDescending(Aqm => Aqm.Id).ToList();
+
+            return Aqm.ToList();
         }
     }
 }

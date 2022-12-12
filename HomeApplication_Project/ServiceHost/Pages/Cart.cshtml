@@ -7,6 +7,8 @@
     ViewData["Title"] = "سبد خرید";
 }
 
+
+
 <div class="breadcrumb-area section-space--half">
     <div class="container wide">
         <div class="row">
@@ -62,7 +64,7 @@
                                     {
                                         <tr>
                                             <td class="pro-thumbnail">
-                                                <a asp-page-handler="RedirectToProductPage" asp-route-id="@item.Id" >
+                                                <a asp-page-handler="RedirectToProductPage" asp-route-id="@item.Id">
                                                     <img src="~/ProductPictures/@item.Picture" class="img-fluid" alt="@item.Name">
                                                 </a>
                                             </td>
@@ -81,9 +83,10 @@
                                                 <span id="totalItemPrice-@item.Id">@item.TotalItemPrice.ToMoney()</span>
                                             </td>
                                             <td class="pro-remove">
-                                                <a asp-page-handler="RemoveFromCart" asp-route-id="@item.Id">
-                                                    <i class="fa fa-trash-o"></i>
-                                                </a>
+                                                <form method="post" asp-page-handler="RemoveFromCart"   asp-route-id="@item.Id" 
+                                                    onclick="return confirm('آیا مطمئن به حذف @item.Name از سبد خرید خود هستید؟')">
+                                                    <button class="border-0 bg-white"  type="submit"><i class="fa fa-trash-o"></i></button>
+                                                </form>
                                             </td>
                                         </tr>
                                     }
@@ -94,9 +97,23 @@
                             <div class="col-lg-6 col-12 d-flex">
                                 <div class="cart-summary">
                                     <div class="cart-summary-button">
-                                        <button class="checkout-btn">
-                                            <a asp-page-handler="GoToCheckOut">تکمیل فرایند خرید</a>
-                                        </button>
+                                        @if (Model.CartItems.Count < 1)
+                                        {
+                                            <form method="get" asp-page="/Index" asp-fragment="OurProducts">
+                                                <button class="checkout-btn">
+                                                    اضافه کردن محصول به سبد
+                                                </button>
+                                            </form>
+                                        }
+                                        else
+                                        {
+                                            <form method="post" asp-page-handler="GoToCheckOut">
+                                                <button class="checkout-btn">
+                                                    تکمیل فرایند خرید
+                                                </button>
+                                            </form>
+                                        }
+
                                     </div>
                                 </div>
                             </div>
@@ -107,3 +124,15 @@
         </div>
     </div>
 </div>
+@section Scripts {
+    @if (Model.Message != null)
+    {
+<script>
+            $(document).ready(function () {
+                let message = "@Model.Message";
+                alert(message);
+        });
+
+</script>
+    }
+}

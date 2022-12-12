@@ -99,6 +99,7 @@ namespace ServiceHost.Pages
             
             var result = _productQuery.CheckInventoryStatus(cart.Items);
 
+
             if (result.Any(CI => CI.IsInStock) == false)
                 return RedirectToPage("/Cart");
 

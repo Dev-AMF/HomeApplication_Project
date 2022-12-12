@@ -735,8 +735,7 @@ select {
 		font-size: 12px;
 		line-height: 18px;
 		position: absolute;
-		top: -5px;
-		left: 100%;
+		right: 120%;
 		width: 18px;
 		height: 18px;
 		color: #e33;
@@ -2035,7 +2034,7 @@ p.slider-title--small {
 
 .single-category-item__content {
 	position: absolute;
-	top: 38px;
+	top: 15px;
 	left: 30px;
 }
 
@@ -4440,13 +4439,13 @@ img {
 		color: #707070;
 	}
 
-		.cart-table td.pro-remove a i {
+		.cart-table td.pro-remove button i {
 			font-size: 15px;
 		}
 
-		.cart-table td.pro-remove a:hover {
-			color: #f00;
-		}
+	.cart-table td.pro-remove button:hover {
+		color: #f00;
+	}
 
 /*-- Calculate Shipping --*/
 
@@ -4607,10 +4606,10 @@ img {
 	}
 
 		.cart-summary .cart-summary-button button {
-			line-height: 24px;
+			line-height: 16px;
 			float: right;
-			width: 140px;
-			height: 36px;
+			width: 192px;
+			height: 38px;
 			margin-top: 10px;
 			margin-left: 20px;
 			padding: 5px 20px;
@@ -8132,3 +8131,21 @@ h3.comment-counter {
 		opacity: 1;
 	}
 }
+
+.titleParagraphs {
+	font-size: 1.1rem;
+}
+
+.headerParagraphPage {
+	font-size: 1.7rem;
+}
+
+.ParagraphsPage {
+	font-size: 1.1rem;
+}
+
+/*.footer-area {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}*/

@@ -611,6 +611,7 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.csproj.CopyComplete
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\staticwebassets\ServiceHost.StaticWebAssets.Manifest.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.genruntimeconfig.cache
+K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\Razor\Pages\ContactUs.cshtml.g.cs
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\ServiceHost.csprojAssemblyReference.cache
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\ServiceHost\obj\Debug\netcoreapp3.1\staticwebassets\ServiceHost.StaticWebAssets.xml

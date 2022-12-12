@@ -135,7 +135,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BM.Presentation", "BM.Prese
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogManagement.Presentation.Api", "BlogManagement.Presentation.Api\BlogManagement.Presentation.Api.csproj", "{6D572C86-47A4-428B-8438-3089ED4CFC2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Infrastructure.AccountACL", "ShopManagement.Infrastructure.AccountACL\ShopManagement.Infrastructure.AccountACL.csproj", "{0309E01A-7B7A-41A9-884E-398FE1406AB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Infrastructure.AccountACL", "ShopManagement.Infrastructure.AccountACL\ShopManagement.Infrastructure.AccountACL.csproj", "{0309E01A-7B7A-41A9-884E-398FE1406AB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

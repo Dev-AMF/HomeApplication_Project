@@ -14,11 +14,14 @@
     }
 
     @if (ViewData["keywords"] != null)
-    {<meta name="keywords" content="@ViewData["keywords"]" />}
+    {
+        <meta name="keywords" content="@ViewData["keywords"]" />
+    }
 
-    @if (ViewData["metaDescription"] != null) 
-    {<meta name="description" content="@ViewData["metaDescription"]" /> }
-
+    @if (ViewData["metaDescription"] != null)
+    {
+        <meta name="description" content="@ViewData["metaDescription"]" />
+    }
     <!-- Vendor CSS -->
     <link href="~/UserTheme/assets/css/vendors.css" rel="stylesheet">
     <!-- Main CSS -->
@@ -56,6 +59,7 @@
     </div>
 
 
+
     <!-- scroll to top  -->
     <div id="scroll-top">
         <span>بازگشت به بالا</span><i class="ion-chevron-right"></i><i class="ion-chevron-right"></i>
@@ -72,11 +76,37 @@
     <script src="~/UserTheme/assets/js/plugins.js"></script>
     <script src="~/UserTheme/assets/js/custom.js"></script>
 
+
+    @RenderSection("Scripts", false)
+
     <script>
-            $(document).ready(function () {
-                updateCart();
-            });
-        </script>
+        $(document).ready(function () {
+            updateCart();
+        });
+    </script>
+
+    <script>
+        window.onscroll = function () {
+            myFunction();
+        };
+
+        let navbar = document.getElementById("HeaderArea");
+        let sticky = navbar.offsetTop;
+
+
+        function myFunction() {
+            //console.log("Test");
+            if (window.pageYOffset > sticky) {
+                navbar.classList.add("stickySet");
+                navbar.classList.remove("stickyremove");
+            } else {
+
+                navbar.classList.add("stickyremove");
+                navbar.classList.remove("stickySet");
+            }
+        }
+    </script>
+
 
 </body>
 

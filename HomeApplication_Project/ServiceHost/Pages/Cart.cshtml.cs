@@ -1,7 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using _0_Framework.Application;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -13,6 +14,9 @@ namespace ServiceHost.Pages
 {
     public class CartModel : PageModel
     {
+        [TempData]
+        public string Message { get; set; }
+
         public List<CartItem> CartItems;
         public const string CookieName = "cart-items";
         private readonly IProductQuery _productQuery;
@@ -29,6 +33,28 @@ namespace ServiceHost.Pages
             var value = Request.Cookies[CookieName];
             var cartItems = serializer.Deserialize<List<CartItem>>(value);
 
+            if (cartItems == null) cartItems = new List<CartItem>();
+
+            if (cartItems.Count < 1) Message = ApplicationMessages.EmptyCart;
+            else Message = null;
+
+            foreach (var item in cartItems)
+                item.CalculateTotalItemPrice();
+
+
+            CartItems = _productQuery.CheckInventoryStatus(cartItems);
+        }
+        public void OnPost()
+        {
+            var serializer = new JavaScriptSerializer();
+            var value = Request.Cookies[CookieName];
+            var cartItems = serializer.Deserialize<List<CartItem>>(value);
+
+            if (cartItems == null) cartItems = new List<CartItem>();
+
+            if (cartItems.Count < 1) Message = ApplicationMessages.EmptyCart;
+            else Message = null;
+
             foreach (var item in cartItems)
                 item.CalculateTotalItemPrice();
 
@@ -36,7 +62,8 @@ namespace ServiceHost.Pages
             CartItems = _productQuery.CheckInventoryStatus(cartItems);
         }
 
-        public IActionResult OnGetRemoveFromCart(int id)
+
+        public IActionResult OnPostRemoveFromCart(int id)
         {
             var serializer = new JavaScriptSerializer();
             var value = Request.Cookies[CookieName];
@@ -56,7 +83,7 @@ namespace ServiceHost.Pages
         }
 
 
-        public IActionResult OnGetGoToCheckOut()
+        public IActionResult OnPostGoToCheckOut()
         {
             var serializer = new JavaScriptSerializer();
             var value = Request.Cookies[CookieName];
@@ -66,11 +93,7 @@ namespace ServiceHost.Pages
                 item.CalculateTotalItemPrice();
 
             CartItems = _productQuery.CheckInventoryStatus(cartItems);
-
-            //if (CartItems.Any(x => !x.IsInStock))
-            //    return RedirectToPage("/Cart");
-            //return RedirectToPage("/Checkout");
-
+           
             return RedirectToPage(CartItems.Any(CI => !CI.IsInStock) ? "/Cart" : "/Checkout");
         }
         public IActionResult OnGetRedirectToProductPage(int id)

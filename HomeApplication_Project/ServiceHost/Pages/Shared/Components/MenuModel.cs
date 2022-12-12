@@ -1,4 +1,7 @@
-﻿using Query.Contracts.ArticleCategory;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Net.Http;
+using Query.Contracts.ArticleCategory;
 using Query.Contracts.ProductCategory;
 using System;
 using System.Collections.Generic;

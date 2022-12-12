@@ -1,4 +1,5 @@
 ﻿const cookieName = "cart-items";
+const hostName = location.protocol + '//' + location.host;
 
 function addToCart(id, name, price, picture) {
     let products = $.cookie(cookieName);
@@ -32,7 +33,16 @@ function updateCart() {
     //debugger;
     let products = $.cookie(cookieName);
     products = JSON.parse(products);
-    $("#cart_items_count").text(products.length);
+    $("#cart_items_count,#cart_items_count_2").each(function ()
+    {
+        let count = 0
+        products.forEach((item) => {
+           // debugger
+            count += Number(item.count)
+        })
+        $(this).text(count);
+
+    });
     const cartItemsWrapper = $("#cart_items_wrapper");
     //debugger;
     cartItemsWrapper.html('');
@@ -62,12 +72,24 @@ function updateCart() {
 }
 
 function removeFromCart(id) {
-    let products = $.cookie(cookieName);
-    products = JSON.parse(products);
-    const itemToRemove = products.findIndex(x => x.id === id);
-    products.splice(itemToRemove, 1);
-    $.cookie(cookieName, JSON.stringify(products), { expires: 2, path: "/" });
-    updateCart();
+    debugger
+    if (location.pathname.includes('/Checkout') ) {
+
+        alert("امکان تغیر سبد خرید در این مرحله وجود ندارد!")
+        return false;
+    }
+    else {
+
+        let products = $.cookie(cookieName);
+        products = JSON.parse(products);
+        const itemToRemove = products.findIndex(x => x.id === id);
+        const itemToRemoveName = products[itemToRemove].name;
+        if (confirm(`آیا مطمئن به حذف کالای ${itemToRemoveName} از سبد خرید خود هستید؟`)) {
+            products.splice(itemToRemove, 1);
+            $.cookie(cookieName, JSON.stringify(products), { expires: 2, path: "/" });
+            updateCart();
+        }
+    }
 }
 
 function changeCartItemCount(id, totalId, count) {
@@ -91,7 +113,7 @@ function changeCartItemCount(id, totalId, count) {
     updateCart();
 
     const settings = {
-        "url": "https://localhost:5001/api/Inventory",
+        "url": hostName + "/api/Inventory",
         "method": "POST",
         "timeout": 0,
         "headers": {
@@ -122,20 +144,20 @@ function changeCartItemCount(id, totalId, count) {
 
 function PriceFormatter(price, totalId) {
 
-    //debugger
+   // debugger
     var callsettings = {
-        "url": "https://localhost:5001/api/Inventory/PriceFormatter/" + price,
+        "url": hostName + "/api/Inventory/PriceFormatter/" + price,
         "method": "GET",
         "timeout": 0,
     };
-
+     debugger
     $.ajax(callsettings).done(function (response) {
 
         let result = response;
 
         $(`#${totalId}`).text(result);
 
-        //console.log(response);
+//        console.log(response);
     });
 
     

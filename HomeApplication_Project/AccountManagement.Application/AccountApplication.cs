@@ -49,9 +49,10 @@ namespace AccountManagement.Application
         {
             var operation = new OperationResult();
 
-            if (_accountRepository.Exists(AT => AT.Username == command.Username || AT.MobileNo == command.MobileNo))
-                return operation.Failed(ApplicationMessages.RecordAlreadyExists);
-
+            if (_accountRepository.Exists(AT => AT.MobileNo == command.MobileNo))
+                return operation.Failed(ApplicationMessages.DuplicateMobileNo);
+            else if (_accountRepository.Exists(AT => AT.Username == command.Username ))
+                return operation.Failed(ApplicationMessages.DuplicateUserName);
 
             var password = _passwordHasher.Hash(command.Password);
             var picturePath = _fileUploader.Upload(command.ProfilePhoto,command.MobileNo ,"ProfilePhotos");

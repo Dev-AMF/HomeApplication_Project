@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ServiceHost.Pages
 {
+    //[BindProperties]
     public class UsersModel : PageModel
     {
         [TempData]
@@ -16,12 +17,15 @@ namespace ServiceHost.Pages
         [TempData]
         public string RegisterMessage { get; set; }
 
+        [BindProperty]  
+        public CreateAccount CreateAccountViewModel { get; set; }
 
         private readonly IAccountApplication _accountApplication;
 
         public UsersModel(IAccountApplication accountApplication)
         {
             _accountApplication = accountApplication;
+            CreateAccountViewModel = new CreateAccount();
         }
 
         public void OnGet()
@@ -44,12 +48,10 @@ namespace ServiceHost.Pages
             return RedirectToPage("/Index");
         }
 
-        public IActionResult OnPostRegister(CreateAccount command)
+        
+        public IActionResult OnPostRegister()
         {
-            var result = _accountApplication.Register(command);
-            if (result.IsSucceded)
-                return RedirectToPage("/Users");
-            
+            var result = _accountApplication.Register(CreateAccountViewModel);
             RegisterMessage = result.Message;
             return RedirectToPage("/Users");
         }

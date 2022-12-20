@@ -70,36 +70,58 @@
                             <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
                                 @if (Model.RegisterMessage != null)
                                 {
-                                    <div class="alert alert-danger">@Model.RegisterMessage</div>
+                                    if (Model.RegisterMessage == "Operation Succeeded.")
+                                    {
+                                        <div class="alert alert-success">عملیات موفقیت آمیز بود.</div>
+                                    }
+                                    else
+                                    {
+                                        <div class="alert alert-danger">@Model.RegisterMessage</div>
+                                    }
                                 }
                                 <form method="post" asp-page-handler="Register">
                                     <div class="login-form">
                                         <h4 class="login-title">ثبت نام</h4>
                                         <div class="row">
                                             <div class="col-md-6 col-12 mb-20">
-                                                <label>نام کامل</label>
-                                                <input type="text" name="fullname" placeholder="نام کامل">
+                                                <div class="form-group">
+                                                    <label class="control-label" asp-for="CreateAccountViewModel.Fullname">نام کامل</label>
+                                                    <input class="form-control" type="text" asp-for="CreateAccountViewModel.Fullname" placeholder="نام کامل">
+                                                    <span asp-validation-for="CreateAccountViewModel.Fullname" class="text-danger"></span>
+                                                </div>
                                             </div>
                                             <div class="col-md-6 col-12 mb-20">
-                                                <label>نام کاربری</label>
-                                                <input type="text" name="username" placeholder="نام کاربری">
+                                                <div class="form-group">
+                                                    <label class="control-label" asp-for="CreateAccountViewModel.Username">نام کاربری</label>
+                                                    <input class="form-control" type="text" asp-for="CreateAccountViewModel.Username" placeholder="نام کاربری">
+                                                    <span asp-validation-for="CreateAccountViewModel.Username" class="text-danger"></span>
+                                                </div>
                                             </div>
                                             <div class="col-md-12 mb-20">
-                                                <label>موبایل</label>
-                                                <input type="number" name="mobileNo" placeholder="موبایل">
+                                                <div class="form-group">
+                                                    <label class="control-label" asp-for="CreateAccountViewModel.MobileNo">موبایل</label>
+                                                    <input class="form-control" type="number" asp-for="CreateAccountViewModel.MobileNo" placeholder="موبایل">
+                                                    <span asp-validation-for="CreateAccountViewModel.MobileNo" class="text-danger"></span>
+                                                </div>
                                             </div>
                                             <div class="col-md-6 mb-20">
-                                                <label>کلمه رمز</label>
-                                                <input type="password" name="password" placeholder="کلمه رمز">
+                                                <div class="form-group">
+                                                    <label class="control-label" asp-for="CreateAccountViewModel.Password">کلمه رمز</label>
+                                                    <input class="form-control" type="password" asp-for="CreateAccountViewModel.Password" placeholder="کلمه رمز">
+                                                    <span asp-validation-for="CreateAccountViewModel.Password" class="text-danger"></span>
+                                                </div>
                                             </div>
                                             <div class="col-md-6 mb-20">
-                                                <label>تایید کلمه رمز</label>
-                                                <input type="password" name="rePassword" placeholder="تایید کلمه رمز">
+                                                <div class="form-group">
+                                                    <label class="control-label" asp-for="CreateAccountViewModel.RePassword">تایید کلمه رمز</label>
+                                                    <input class="form-control" type="password" asp-for="CreateAccountViewModel.RePassword" placeholder="تایید کلمه رمز">
+                                                    <span asp-validation-for="CreateAccountViewModel.RePassword" class="text-danger"></span>
+                                                </div>
                                             </div>
-                                            <div class="col-12">
-                                                <button class="register-button mt-0">ثبت نام</button>
+                                                <div class="col-12">
+                                                    <button class="register-button mt-0" type="submit">ثبت نام</button>
+                                                </div>
                                             </div>
-                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -110,3 +132,9 @@
         </div>
     </div>
 </div>
+
+@section Scripts
+{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

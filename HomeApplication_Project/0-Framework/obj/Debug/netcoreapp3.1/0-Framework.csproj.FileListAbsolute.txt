@@ -21,4 +21,3 @@ K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplica
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\0-Framework\bin\Debug\netcoreapp3.1\0-Framework.dll
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\0-Framework\bin\Debug\netcoreapp3.1\0-Framework.pdb
 K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\0-Framework\obj\Debug\netcoreapp3.1\0-Framework.genruntimeconfig.cache
-K:\PrgrammingSources\A\Atriya(Asp.Net)\Home-Application[GithubClone]\HomeApplication_Project\0-Framework\obj\Debug\netcoreapp3.1\0-Framework.csprojAssemblyReference.cache

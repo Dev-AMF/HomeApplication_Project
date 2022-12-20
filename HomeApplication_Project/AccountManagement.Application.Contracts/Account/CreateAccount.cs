@@ -15,10 +15,17 @@ namespace AccountManagement.Application.Contracts.Account
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string Username { get; set; }
 
+
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
+        [RegularExpression(RegexPatterns.PasswordFormat, ErrorMessage = ValidationMessages.InvalidPassword)]
         public string Password { get; set; }
 
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
+        [Compare(nameof(Password),ErrorMessage = ValidationMessages.PasswordsDontMatch)]
+        public string RePassword { get; set; }
+
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
+        [RegularExpression(RegexPatterns.MoblieFormat, ErrorMessage = ValidationMessages.InvalidMobileFormat)]
         public string MobileNo { get; set; }
 
         [Range(1, int.MaxValue, ErrorMessage = ValidationMessages.IsRequired)]

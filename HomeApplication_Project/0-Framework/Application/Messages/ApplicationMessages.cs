@@ -9,6 +9,8 @@ namespace _0_Framework.Application
         public const string RecordAlreadyExists = "Another Record With Name-{0}-Already Exists!,";
         public const string RecordNotFound = "There Is Not Any Records Matching With The Given Information!";
         public const string RecordAlreadyExistsNonArgument = "Another Record With Same Information Already Exists!";
+        public const string DuplicateMobileNo = "خطا : این شماره موبایل قبلا ثبت شده!!";
+        public const string DuplicateUserName = "خطا : نام کاربری نمیتواند تکراری باشد.";
         public const string PasswordNotMatch = "رمز عبور مطابقت ندارد.";
         public const string WrongUserOrPass = "نام کاربری یا رمز عبور اشتباه است!!";
         public const string SuccessfulPayment = "پرداخت با موفقیت انجام شد.";
